@@ -1,6 +1,6 @@
-import blur from "/public/blur.png";
-import example from "/public/example.png";
-import result from "/public/result.png";
+import voorbeeld1 from "/public/voorbeeld1.png";
+import wazig1 from "/public/wazig1.png";
+import resultaat1 from "/public/resultaat1.png";
 
 export default function ExplainerSection() {
   return (
@@ -20,7 +20,7 @@ export default function ExplainerSection() {
           glasses or hats.
         </p>
         <img
-          src={example.src}
+          src={voorbeeld1.src}
           alt="AI Headshot example"
           className="rounded-lg object-cover w-full md:w-3/4 lg:w-1/2 mx-auto"
         />
@@ -38,7 +38,7 @@ export default function ExplainerSection() {
           The AI magic takes ~20 minutes. You'll get an email when its ready!
         </p>
         <img
-          src={blur.src}
+          src={wazig1.src}
           alt="AI Headshot blur"
           className="rounded-lg object-cover w-full md:w-3/4 lg:w-1/2 mx-auto"
         />
@@ -56,7 +56,7 @@ export default function ExplainerSection() {
           Once your model is trained, we'll give you amazing headshots!
         </p>
         <img
-          src={result.src}
+          src={resultaat1.src}
           alt="AI Headshot result"
           className="rounded-lg object-cover w-full md:w-3/4 lg:w-1/2 mx-auto"
         />
