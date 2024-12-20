@@ -41,10 +41,9 @@ const StripePricingTable = ({ user }: Props) => {
       <script async src="https://js.stripe.com/v3/pricing-table.js"></script>
       <stripe-pricing-table
         pricing-table-id="prctbl_1QY8uvDAjFIdmdkIgOzTDE3D"
-        publishable-key="pk_live_51QY8Q9DAjFIdmdkIx9k2mwpVgWfat3uXE1KF7fT14q7LhnHSoBxSUgkYWYvpoMnJVaRdXsjv2BypLppQlPm3Fxt300TfKbl6CC">
+        publishable-key="pk_live_51QY8Q9DAjFIdmdkIx9k2mwpVgWfat3uXE1KF7fT14q7LhnHSoBxSUgkYWYvpoMnJVaRdXsjv2BypLppQlPm3Fxt300TfKbl6CC"
         client-reference-id={user.id}
-        customer-email={user.email}
-      </stripe-pricing-table>
+        customer-email={user.email}></stripe-pricing-table>
     </div>
   );
 };
