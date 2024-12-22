@@ -106,20 +106,18 @@ export const Login = ({
           <p className="text-xs opacity-60">
             Sign in or create an account to get started.
           </p>
-          {/* <Button
+          <Button
             onClick={signInWithGoogle}
             variant={"outline"}
-            className="font-semibold"
-          >
+            className="font-semibold">
             <AiOutlineGoogle size={20} />
             Continue with Google
           </Button>
-          <OR /> */}
+          <OR />
 
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="flex flex-col gap-2"
-          >
+            className="flex flex-col gap-2">
             <div className="flex flex-col gap-4">
               <div className="flex flex-col gap-2">
                 <Input
@@ -153,8 +151,7 @@ export const Login = ({
               disabled={isSubmitting}
               variant="outline"
               className="w-full"
-              type="submit"
-            >
+              type="submit">
               Continue with Email
             </Button>
           </form>
