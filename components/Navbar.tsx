@@ -60,7 +60,9 @@ export default async function Navbar() {
           <Link href="/">
             <h2 className=" font-medium  text-2xl items-center   flex">
               <Image src="/logo.png" width={30} height={30} alt="Logo" />{" "}
-              <span className=" mt-1 ml-1 pb-1 px-2 lg:text">Headshot 4u</span>{" "}
+              <span className=" mt-1 ml-1 pb-1 px-2 lg:text">
+                Photoshoot4u 4u
+              </span>{" "}
             </h2>
           </Link>
         </div>
