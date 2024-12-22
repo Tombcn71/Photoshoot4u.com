@@ -18,8 +18,8 @@ function footer3() {
 
           <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-black">
             Our mission is to make Headshot photography accessible for everyone.
-            With AI Headshots we significantly reduce the costs of traditional
-            photoshoots.
+            With AI Headshots we significantly reduce the cost and time
+            consumption of traditional photoshoots.
           </p>
           <ul className="mt-12 flex flex-wrap justify-center text-black gap-6 md:gap-8 lg:gap-12">
             <Link href="/Privacy">Privacypolicy</Link>
