@@ -126,10 +126,10 @@ export async function POST(request: Request) {
     if (resendApiKey) {
       const resend = new Resend(resendApiKey);
       await resend.emails.send({
-        from: "noreply@hphotoshoot4u.com",
+        from: "noreply@photoshoot4u.com",
         to: user?.email ?? "",
         subject: "Your model was successfully trained!",
-        html: `<h2>We're writing to notify you that your model training was successful! 1 credit has been used from your account. Click on the button to get your headshots!  <a href="https://www.headshot4u.com/overview">
+        html: `<h2>We're writing to notify you that your model training was successful! 1 credit has been used from your account. Click on the button to get your headshots!  <a href="https://www.photoshoot4u.com/overview">
         <button
           type="button"
           class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
