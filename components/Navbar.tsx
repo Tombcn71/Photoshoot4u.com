@@ -128,7 +128,7 @@ export default async function Navbar() {
               <MenuIcon className="mr-2 mt-3" />
             </SheetTrigger>
             <div className="">
-              <SheetContent className="w-[220px] h-[250px] bg-black p-1 text-align: leftsm:w-[240px]">
+              <SheetContent className="w-[220px] h-[250px] text-black p-1 text-align: leftsm:w-[240px]">
                 {" "}
                 <div className="overflow-anchor: none;">
                   <ul>
