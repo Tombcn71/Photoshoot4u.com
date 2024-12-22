@@ -1,6 +1,13 @@
-import { AvatarIcon } from "@radix-ui/react-icons";
+import { AvatarIcon, Pencil1Icon } from "@radix-ui/react-icons";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+import {
+  MenuIcon,
+  CreditCard,
+  ShieldQuestion,
+  RssIcon,
+  MailIcon,
+} from "lucide-react";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -14,6 +21,16 @@ import { Button } from "./ui/button";
 import React from "react";
 import { Database } from "@/types/supabase";
 import ClientSideCredits from "./realtime/ClientSideCredits";
+import Image from "next/image";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 
 export const dynamic = "force-dynamic";
 
@@ -37,35 +54,46 @@ export default async function Navbar() {
     .single();
 
   return (
-    <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between">
-      <div className="flex gap-2 h-full">
-        <Link href="/">
-          <h2 className="font-bold text-2xl">Headshot 4u</h2>
-        </Link>
-      </div>
-      {user && (
-        <div className="hidden lg:flex flex-row gap-2">
-          <Link href="/overview">
-            <Button variant={"ghost"}>Home</Button>
+    <div className=" flex w-full px-4 lg:px-40 py-4  border-b text-center gap-8 justify-between ">
+      {!user && (
+        <div className="flex gap-2 h-full ">
+          <Link href="/">
+            <h2 className=" font-medium  text-2xl items-center   flex">
+              <Image src="/logo.png" width={30} height={30} alt="Logo" />{" "}
+              <span className=" mt-1 ml-1 pb-1 px-2 lg:text">Headshot 4u</span>{" "}
+            </h2>
           </Link>
-          {packsIsEnabled && (
-            <Link href="/overview/packs">
-              <Button variant={"ghost"}>Packs</Button>
-            </Link>
-          )}
+        </div>
+      )}
+      {!user && (
+        <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
+          <Link href="/#How">
+            <Button variant={"ghost"}>How it works</Button>
+          </Link>
+
+          <Link href="/#Faq ">
+            <Button variant={"ghost"}>Faq</Button>
+          </Link>
+          <Link href="/#Pricing">
+            <Button variant={"ghost"}>Pricing</Button>
+          </Link>
+        </div>
+      )}
+      {user && packsIsEnabled && (
+        <Link href="/overview/packs">
+          <Button variant={"ghost"}>Packs</Button>
+        </Link>
+      )}
+      {user && (
+        <div className=" flex flex-row lg:ml-auto  gap-2 ">
           {stripeIsConfigured && (
             <Link href="/get-credits">
-              <Button variant={"ghost"}>Get Credits</Button>
+              <Button variant={"ghost"}>Buy credits</Button>
             </Link>
           )}
         </div>
       )}
-      <div className="flex gap-4 lg:ml-auto">
-        {!user && (
-          <Link href="/login">
-            <Button variant={"ghost"}>Login / Signup</Button>
-          </Link>
-        )}
+      <div className=" flex gap-4 lg:ml-auto scroll-smooth">
         {user && (
           <div className="flex flex-row gap-4 text-center align-middle justify-center">
             {stripeIsConfigured && (
@@ -73,7 +101,7 @@ export default async function Navbar() {
             )}
             <DropdownMenu>
               <DropdownMenuTrigger asChild className="cursor-pointer">
-                <AvatarIcon height={24} width={24} className="text-primary" />
+                <AvatarIcon height={24} width={24} className="text-sky-600" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56">
                 <DropdownMenuLabel className="text-primary text-center overflow-hidden text-ellipsis">
@@ -85,14 +113,68 @@ export default async function Navbar() {
                     type="submit"
                     className="w-full text-left"
                     variant={"ghost"}>
-                    Log out
+                    Uitloggen
                   </Button>
                 </form>
               </DropdownMenuContent>
             </DropdownMenu>
           </div>
-        )}
+        )}{" "}
+        <Sheet>
+          <div className=" md:hidden ">
+            <SheetTrigger>
+              <MenuIcon className="mr-2 mt-3" />
+            </SheetTrigger>
+            <div className="">
+              <SheetContent className="w-[220px] h-[250px] bg-black p-1 text-align: leftsm:w-[240px]">
+                {" "}
+                <div className="overflow-anchor: none;">
+                  <ul>
+                    <li className="flex flex-col pt-4   ">
+                      <Link href="/#How" className="items-cemter">
+                        <Button
+                          variant={"ghost"}
+                          className="text-l	text-align: left">
+                          How it works
+                        </Button>
+                      </Link>
+                      <Link href="/#Pricing" className="items-cemter">
+                        <Button
+                          variant={"ghost"}
+                          className="text-l	text-align: left">
+                          Pricing
+                        </Button>
+                      </Link>
+                      <Link href="/#Faq">
+                        <Button variant={"ghost"} className="text-l	">
+                          Faq
+                        </Button>
+                      </Link>
+
+                      <SheetClose asChild>
+                        {!user && (
+                          <Link href="/login" className="pl-4 pt-4">
+                            <Button className="bg-blue-600 hover:bg-blue-500 pl-4">
+                              Login / Register
+                            </Button>
+                          </Link>
+                        )}
+                      </SheetClose>
+                    </li>
+                  </ul>
+                </div>{" "}
+              </SheetContent>{" "}
+            </div>
+          </div>
+        </Sheet>
       </div>
+      {!user && (
+        <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
+          <Link href="/login">
+            <Button variant={"ghost"}> Login / Register</Button>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }
