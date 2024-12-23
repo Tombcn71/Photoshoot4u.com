@@ -8,7 +8,7 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import disposableDomains from "disposable-email-domains";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { AiOutlineGoogle } from "react-icons/ai";
+import { AiOutlineGoogle, AiOutlineFacebook } from "react-icons/ai";
 import { WaitingForMagicLink } from "./WaitingForMagicLink";
 
 type Inputs = {
@@ -79,6 +79,17 @@ export const Login = ({
     console.log(data, error);
   };
 
+  const signInWithFacebook = async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "facebook",
+      options: {
+        redirectTo: redirectUrl,
+      },
+    });
+
+    console.log(data, error);
+  };
+
   const signInWithMagicLink = async (email: string) => {
     const { error } = await supabase.auth.signInWithOtp({
       email,
@@ -102,19 +113,25 @@ export const Login = ({
     <>
       <div className="flex items-center justify-center p-8">
         <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
-          <h1 className="text-xl">Welcome</h1>
-          <p className="text-xs opacity-60">
+          <h1 className="text-4xl text-center">👋Welcome!</h1>
+          <p className="text-l text-center opacity-60">
             Sign in or create an account to get started.
           </p>
           <Button
             onClick={signInWithGoogle}
-            variant={"outline"}
+            variant={"default"}
             className="font-semibold">
             <AiOutlineGoogle size={20} />
             Continue with Google
           </Button>
-          <OR />
-
+          <Button
+            onClick={signInWithFacebook}
+            variant={"default"}
+            className="font-semibold">
+            <AiOutlineFacebook size={20} />
+            Continue with Facebook
+          </Button>
+          {/* <OR />
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-2">
@@ -154,7 +171,7 @@ export const Login = ({
               type="submit">
               Continue with Email
             </Button>
-          </form>
+          </form>*/}
         </div>
       </div>
     </>
