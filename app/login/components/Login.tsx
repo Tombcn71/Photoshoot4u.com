@@ -124,7 +124,7 @@ export const Login = ({
             <AiOutlineGoogle size={20} />
             Continue with Google
           </Button>
-          <Button
+          {/*   <Button
             onClick={signInWithFacebook}
             variant={"default"}
             className="font-semibold">
