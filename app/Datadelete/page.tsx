@@ -1,7 +1,7 @@
 import React from "react";
 
-function Datadelete() {
+function Datadeletetion() {
   return <div>Data Deletion</div>;
 }
 
-export default Datadelete;
+export default Datadeletetion;
