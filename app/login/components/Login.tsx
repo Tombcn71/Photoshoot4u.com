@@ -8,7 +8,7 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import disposableDomains from "disposable-email-domains";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { AiOutlineGoogle, AiOutlineFacebook } from "react-icons/ai";
+import { AiOutlineGoogle, AiOutlineLinkedin } from "react-icons/ai";
 import { WaitingForMagicLink } from "./WaitingForMagicLink";
 
 type Inputs = {
@@ -79,9 +79,9 @@ export const Login = ({
     console.log(data, error);
   };
 
-  const signInWithFacebook = async () => {
+  const signInWithLinkedin = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "facebook",
+      provider: "linkedin",
       options: {
         redirectTo: redirectUrl,
       },
@@ -119,10 +119,15 @@ export const Login = ({
           </p>
           <Button
             onClick={signInWithGoogle}
-            variant={"default"}
-            className="font-semibold">
-            <AiOutlineGoogle size={20} />
+            className="font-semibold bg-blue-500  hover:bg-blue-600 p-6 ">
+            <AiOutlineGoogle size={24} />
             Continue with Google
+          </Button>
+          <Button
+            onClick={signInWithLinkedin}
+            className="font-semibold bg-blue-900 hover:bg-blue-800 p-6">
+            <AiOutlineLinkedin size={24} />
+            Continue with Linkedin
           </Button>
           {/*   <Button
             onClick={signInWithFacebook}
