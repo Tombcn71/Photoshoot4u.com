@@ -81,7 +81,7 @@ export const Login = ({
 
   const signInWithLinkedin = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "linkedin",
+      provider: "linkedin_oidc",
       options: {
         redirectTo: redirectUrl,
       },
