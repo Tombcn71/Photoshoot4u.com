@@ -113,7 +113,7 @@ export const Login = ({
     <>
       <div className="flex items-center justify-center p-8">
         <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
-          <h1 className="text-4xl text-center">👋Welcome!</h1>
+          <h1 className="text-4xl pb-4 text-center">👋Welcome!</h1>{" "}
           <p className="text-l text-center opacity-60">
             Sign in to get started. Then you can buy credits and upload images
             to start your photoshoot.

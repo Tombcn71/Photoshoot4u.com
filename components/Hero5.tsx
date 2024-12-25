@@ -19,14 +19,20 @@ export default () => {
   return (
     <>
       <section className="mt-14 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
+        <div>
+          {" "}
+          <p className="text-md text-center pb-4 text-gray-500 italic">
+            Trusted by professionals worldwide. Quick and efficient.
+          </p>
+        </div>
         <div className="text-center pb-4 space-y-4">
-          <h2 className="text-4xl text-slate-800 font-extrabold mx-auto md:text-5xl">
-            Generate <span className="text-blue-500">Professional</span>{" "}
-            Headshots with AI{" "}
+          <h2 className="text-4xl text-slate-800 font-bold mx-auto md:text-5xl">
+            <span className="text-blue-500">Professional</span> headshots
+            without a photographer.{" "}
           </h2>
-          <p className="max-w-2xl mx-auto text-gray-700">
-            Elevate your online presence with studio-quality headshots. Save
-            money and time.
+          <p className="max-w-2xl text-lg mx-auto text-gray-700">
+            Elevate your online presence with studio-quality AI headshots.{" "}
+            <br /> No need to arrange a time-consuming photoshoot.
           </p>
         </div>
         <div>

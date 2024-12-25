@@ -6,9 +6,9 @@ import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 
 export const metadata = {
-  title: "Generate professional headshots with AI | Photoshoot4u",
+  title: "Professional headshots without a photographer | Photoshoot4u",
   description:
-    "Elevate Your Digital Presence with AI-Generated Headshots. Ideal for social profiles, resumes, and professional portfolios.",
+    "Elevate your online presence with studio-quality AI headshots. No need to arrange a time-consuming photoshoot",
 };
 
 export default function RootLayout({ children }: any) {
