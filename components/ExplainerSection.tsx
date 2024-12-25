@@ -58,8 +58,6 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Get amazing headshots</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Once your model is trained, we'll give you amazing headshots!
-          <br />
           Click on the link in the email. <br />
           On the training page, click on the "finished" batch.
           <br />
