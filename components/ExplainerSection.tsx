@@ -5,7 +5,9 @@ import resultaat1 from "/public/resultaat1.png";
 export default function ExplainerSection() {
   return (
     <div className="w-full max-w-6xl mt-16 p-8 bg-gray-100 rounded-lg space-y-8">
-      <h2 className="text-3xl font-bold text-center mb-8">How It Works</h2>
+      <h2 id="How" className="text-3xl font-bold text-center mb-8">
+        How It Works
+      </h2>
 
       {/* Step 1: Upload your images */}
       <div className="space-y-4">
@@ -16,11 +18,11 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Upload your images</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Upload 4+ high-quality selfies: Taken on different days, with
-          different backgrounds and clothes,
+          Upload 8-16 high-quality images: Use some shoulders-up images. And
+          some waist-up images. <br />
+          Taken on different days, with different backgrounds and clothes,
           <br /> Looking at the camera, front facing, 1 person in frame, no
-          glasses or hats. <br />
-          Use shoulders-up images. Waist-up images are also good
+          sunglasses or hats.
         </p>
         <img
           src={voorbeeld1.src}
@@ -38,8 +40,7 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Our AI gets to work</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          The AI magic takes ~20 minutes. You'll get an email when its ready!
-          Click on the link in the email.
+          The AI magic takes ~60 minutes. You'll get an email when its ready!{" "}
         </p>
         <img
           src={wazig1.src}
@@ -58,6 +59,11 @@ export default function ExplainerSection() {
         </div>
         <p className="text-sm text-gray-600 text-center">
           Once your model is trained, we'll give you amazing headshots!
+          <br />
+          Click on the link in the email. <br />
+          On the training page, click on the "finished" batch.
+          <br />
+          Now download your photos!
         </p>
         <img
           src={resultaat1.src}

@@ -13,7 +13,7 @@ export const metadata = {
 
 export default function RootLayout({ children }: any) {
   return (
-    <html lang="en">
+    <html lang="en" className=" scroll-smooth">
       <body className="min-h-screen flex flex-col">
         <section>
           <Suspense

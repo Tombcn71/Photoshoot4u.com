@@ -44,7 +44,7 @@ export default () => {
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
         <div className="flex-1">
           <div className="max-w-lg mb-10">
-            <h3 className="font-semibold text-indigo-600">
+            <h3 id="Faq" className="font-semibold text-indigo-600">
               Frequently asked questions
             </h3>
             <p className="mt-3 text-gray-800 text-3xl font-extrabold sm:text-4xl">
