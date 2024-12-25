@@ -16,9 +16,11 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Upload your images</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Upload 4+ high-quality selfies: Looking at the camera, front facing, 1
-          person in frame, no glasses or hats. Use shoulders-up images. Waist-up
-          images are also good
+          Upload 4+ high-quality selfies: Taken on different days, with
+          different backgrounds and clothes,
+          <br /> Looking at the camera, front facing, 1 person in frame, no
+          glasses or hats. <br />
+          Use shoulders-up images. Waist-up images are also good
         </p>
         <img
           src={voorbeeld1.src}

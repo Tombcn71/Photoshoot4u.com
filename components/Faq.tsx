@@ -6,16 +6,20 @@ export default () => {
       a: "Yes, the AI ​​technology we use is professional quality and is almost indistinguishable from a photo by a real photographer. You can take your AI portrait photos anywhere with use confidence where you would use a real photo.",
     },
     {
-      q: "How many good photos can I expect??",
-      a: "Just like a real photo session, not every photo is a winner. Where you get 1 to 2 good photos during a traditional photo session, we can guarantee you 3 to 6. We will send you the whole batch of it Showing 40 photos so you can choose the best one yourself.",
+      q: "How do i download my photos?",
+      a: "Doubleclick on the photos will place your photos in a downloadfolder on your computer, on your phone: touch the photo and follow your phones instructions",
+    },
+    {
+      q: "How many good photos can I expect?",
+      a: "Just like a real photo session, not every photo is a winner. Where you get 1 to 2 good photos during a traditional photo session, we can guarantee you 10 to 18. We will send you the whole batch of it Showing 40 photos so you can choose the best one yourself.",
     },
     {
       q: "What kind of clothes do I wear to the results?",
-      a: "You can choose your clothes from the different pac ks we offer",
+      a: "We trained our AI model with blazers, suits, dressshirts and blouses",
     },
     {
       q: "What kind of background do my photos have?",
-      a: "We use backgrounds from famous cities like Paris London, Barcelona, Rome",
+      a: "We use a gray background as in a studio and backgrounds from offices, trendy workspaces, blurred city lights and more",
     },
     {
       q: "Do i have the rights to use the photos anywhere?",
