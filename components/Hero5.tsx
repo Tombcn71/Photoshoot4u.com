@@ -21,7 +21,8 @@ export default () => {
       <section className="mt-14 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
         <div className="text-center pb-4 space-y-4">
           <h2 className="text-4xl text-slate-800 font-extrabold mx-auto md:text-5xl">
-            Generate Professional Headshots with AI{" "}
+            Generate <span className="text-blue-500">Professional</span>{" "}
+            Headshots with AI{" "}
           </h2>
           <p className="max-w-2xl mx-auto text-gray-700">
             Elevate your online presence with studio-quality headshots. Save
