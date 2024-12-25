@@ -53,7 +53,7 @@ const pricingOptions = [
     price: "29€",
     description: "1 AI photoshoot for 1 person.",
     features: [
-      "1 fotoshoot",
+      "1 photoshoot",
       "40 HD photo's",
       "More then 20 styles",
       "Done in 60 minutes",

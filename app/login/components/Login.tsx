@@ -115,7 +115,8 @@ export const Login = ({
         <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
           <h1 className="text-4xl text-center">👋Welcome!</h1>
           <p className="text-l text-center opacity-60">
-            Sign in or create an account to get started.
+            Sign in to get started. Then you can buy credits and upload images
+            to start your photoshoot.
           </p>
           <Button
             onClick={signInWithGoogle}
@@ -129,6 +130,18 @@ export const Login = ({
             <AiOutlineLinkedin size={24} />
             Continue with Linkedin
           </Button>
+          <div>
+            {" "}
+            <p className="text-sm text-gray-500 italic">
+              Trusted by professionals worldwide. Quick and efficient.
+            </p>
+          </div>
+          <div className="pt-6 text-sm text-gray-500">
+            {" "}
+            ✅ 14 days money back guarantee <br />
+            ✅ Livechat 24 hrs available <br />
+            ✅ Done in 1 hour. fast turn around <br />
+          </div>
           {/*   <Button
             onClick={signInWithFacebook}
             variant={"default"}
