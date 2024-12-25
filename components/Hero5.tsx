@@ -24,8 +24,8 @@ export default () => {
             Generate Professional Headshots with AI{" "}
           </h2>
           <p className="max-w-2xl mx-auto text-gray-700">
-            Elevate Your Digital Presence with AI-Generated Headshots. Ideal for
-            social profiles, resumes, and professional portfolios.
+            Elevate your online presence with studio-quality headshots. Save
+            money and time.
           </p>
         </div>
         <div>
