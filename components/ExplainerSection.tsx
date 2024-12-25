@@ -16,8 +16,9 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Upload your images</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Upload 4+ high-quality selfies: front facing, 1 person in frame, no
-          glasses or hats.
+          Upload 4+ high-quality selfies: Looking at the camera, front facing, 1
+          person in frame, no glasses or hats. Use shoulders-up images. Waist-up
+          images are also good
         </p>
         <img
           src={voorbeeld1.src}
@@ -36,6 +37,7 @@ export default function ExplainerSection() {
         </div>
         <p className="text-sm text-gray-600 text-center">
           The AI magic takes ~20 minutes. You'll get an email when its ready!
+          Click on the link in the email.
         </p>
         <img
           src={wazig1.src}
