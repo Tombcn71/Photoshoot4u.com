@@ -61,8 +61,13 @@ export default function ExplainerSection() {
           Click on the link in the email. <br />
           On the training page, click on the "finished" batch.
           <br />
-          Now download your photos!
+          Now download your photos! <br /> p.s If the whole batch is not showing
+          yet,
+          <br />
+          please be patient and come back in a few minutes. It will deliver 40
+          images.
         </p>
+
         <img
           src={resultaat1.src}
           alt="AI Headshot result"
