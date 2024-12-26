@@ -18,8 +18,8 @@ export default function ExplainerSection() {
           <h3 className="text-2xl font-semibold">Upload your images</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Upload 8-16 high-quality images: Use some shoulders-up images. And
-          some waist-up images. <br />
+          Upload 10 high-quality images: Use some shoulders-up images. And some
+          waist-up images. <br />
           Taken on different days, with different backgrounds and clothes,
           <br /> Looking at the camera, front facing, 1 person in frame, no
           sunglasses or hats.
