@@ -3,6 +3,7 @@ const nextConfig = {
   experimental: {
     esmExternals: "loose",
   },
+  outputFileTracing: true,
 };
 
 module.exports = nextConfig;
