@@ -10,7 +10,7 @@ export const metadata = {
   description:
     "Elevate your online presence with studio-quality AI headshots. No need to arrange a time-consuming photoshoot",
 };
-const CrispWithNoSSR = dynamic(() => import("../../components/crisp"));
+const CrispWithNoSSR = dynamic(() => import("../components/crisp"));
 
 export default function RootLayout({ children }: any) {
   return (

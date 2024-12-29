@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/[locale]/page.tsx",
+    "app/page.tsx",
     "i18nConFig.js"
   ],
   "exclude": ["node_modules"]

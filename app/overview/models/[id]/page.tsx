@@ -1,4 +1,4 @@
-import Login from "@/app/[locale]/login/page";
+import Login from "@/app/login/page";
 import { Icons } from "@/components/icons";
 import ClientSideModel from "@/components/realtime/ClientSideModel";
 import { Badge } from "@/components/ui/badge";

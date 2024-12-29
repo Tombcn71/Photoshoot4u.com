@@ -1,7 +1,6 @@
 import { AvatarIcon, Pencil1Icon } from "@radix-ui/react-icons";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import LanguageChanger from "@/components/LanguageChanger";
 
 import {
   MenuIcon,
@@ -153,9 +152,7 @@ export default async function Navbar() {
                           Faq
                         </Button>
                       </Link>
-                      <div className="pl-4">
-                        <LanguageChanger />
-                      </div>
+
                       <SheetClose asChild>
                         {!user && (
                           <Link href="/login" className="pl-4 pt-4">
@@ -173,10 +170,7 @@ export default async function Navbar() {
           </div>
         </Sheet>
       </div>{" "}
-      <div className="flex justify-end space-x-14">
-        {" "}
-        <LanguageChanger />
-      </div>
+      <div className="flex justify-end space-x-14"> </div>
       {!user && (
         <>
           <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">

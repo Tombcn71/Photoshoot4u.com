@@ -29,7 +29,7 @@ export default () => {
           <ul className="space-y-4 divide-y">
             <li className="py-5">
               <summary className="flex items-center justify-between font-semibold text-gray-700">
-                {t("q1")}{" "}
+                Can this replace a real photo shoot?{" "}
               </summary>
               <p className="mt-3 text-gray-600 leading-relaxed">{t("a1")} </p>
             </li>

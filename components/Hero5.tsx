@@ -24,12 +24,12 @@ export default () => {
         </div>
         <div className="text-center pb-4 space-y-4">
           <h2 className="text-4xl text-slate-800 font-bold mx-auto md:text-5xl">
-            {t("header")}
+            Professional headshots without a photographer.
           </h2>
           <p className="text-lg">
-            {t("subheader")}
+            Elevate your online presence with studio-quality AI headshots.
             <br />
-            {t("subheaderbr")}
+            No need to arrange a time-consuming photoshoot.
           </p>
         </div>
         <div>
