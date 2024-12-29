@@ -40,6 +40,7 @@ export default function LanguageChanger() {
     <select className="border-2" onChange={handleChange} value={currentLocale}>
       <option value="en">EN</option>
       <option value="es">ES</option>
+      <option value="nl">NL</option>
     </select>
   );
 }
