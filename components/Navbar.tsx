@@ -1,6 +1,8 @@
 import { AvatarIcon, Pencil1Icon } from "@radix-ui/react-icons";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+import LanguageChanger from "@/components/LanguageChanger";
+
 import {
   MenuIcon,
   CreditCard,
@@ -72,13 +74,12 @@ export default async function Navbar() {
           <Link href="/#How">
             <Button variant={"ghost"}>How it works</Button>
           </Link>
-
           <Link href="/#Faq ">
             <Button variant={"ghost"}>Faq</Button>
           </Link>
           <Link href="/#Pricing">
             <Button variant={"ghost"}>Pricing</Button>
-          </Link>
+          </Link>{" "}
         </div>
       )}
       {user && packsIsEnabled && (
@@ -94,7 +95,7 @@ export default async function Navbar() {
             </Link>
           )}
         </div>
-      )}
+      )}{" "}
       <div className=" flex gap-4 lg:ml-auto scroll-smooth">
         {user && (
           <div className="flex flex-row gap-4 text-center align-middle justify-center">
@@ -152,7 +153,9 @@ export default async function Navbar() {
                           Faq
                         </Button>
                       </Link>
-
+                      <div className="pl-4">
+                        <LanguageChanger />
+                      </div>
                       <SheetClose asChild>
                         {!user && (
                           <Link href="/login" className="pl-4 pt-4">
@@ -169,13 +172,22 @@ export default async function Navbar() {
             </div>
           </div>
         </Sheet>
+      </div>{" "}
+      <div className="flex justify-end space-x-14">
+        {" "}
+        <LanguageChanger />
       </div>
       {!user && (
-        <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
-          <Link href="/login">
-            <Button variant={"ghost"}> Login / Register</Button>
-          </Link>
-        </div>
+        <>
+          <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
+            <Link href="/login">
+              <Button className="bg-white hover:bg-gray-100    border text-black">
+                {" "}
+                Login / Register
+              </Button>
+            </Link>{" "}
+          </div>{" "}
+        </>
       )}
     </div>
   );

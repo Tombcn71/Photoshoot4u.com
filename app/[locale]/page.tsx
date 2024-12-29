@@ -1,21 +1,21 @@
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-import Link from "next/link";
 import { redirect } from "next/navigation";
-
-import hero5 from "/public/hero.png";
-
-import { Button } from "@/components/ui/button";
+import TranslationsProvider from "@/components/TranslationsProvider";
 import ExplainerSection from "@/components/ExplainerSection";
-import PricingSection from "@/components/PricingSection";
 import Gallery from "@/components/gallery";
 import Hero5 from "@/components/Hero5";
 import Faq from "@/components/Faq";
+import initTranslations from "../i18n";
+import PricingSection from "@/components/PricingSection";
+
+const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
 
-export default async function Index() {
+export default async function Index({ params: { locale } }) {
   const supabase = createServerComponentClient({ cookies });
+  const { t, resources } = await initTranslations(locale, ["home"]);
 
   const {
     data: { user },
@@ -28,10 +28,14 @@ export default async function Index() {
   return (
     <>
       <>
-        {" "}
-        <Hero5 /> <Gallery /> <ExplainerSection />
-        <Faq />
-        <PricingSection />
+        <TranslationsProvider
+          namespaces={i18nNamespaces}
+          locale={locale}
+          resources={resources}>
+          <Hero5 /> <Gallery /> <ExplainerSection />
+          <Faq />
+          <PricingSection />
+        </TranslationsProvider>
       </>
     </>
   );

@@ -8,7 +8,11 @@ import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import disposableDomains from "disposable-email-domains";
 import { useState } from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
-import { AiOutlineGoogle, AiOutlineLinkedin } from "react-icons/ai";
+import {
+  AiOutlineGoogle,
+  AiOutlineLinkedin,
+  AiOutlineApple,
+} from "react-icons/ai";
 import { WaitingForMagicLink } from "./WaitingForMagicLink";
 
 type Inputs = {
@@ -78,6 +82,16 @@ export const Login = ({
 
     console.log(data, error);
   };
+  const signInWithApple = async () => {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "apple",
+      options: {
+        redirectTo: redirectUrl,
+      },
+    });
+
+    console.log(data, error);
+  };
 
   const signInWithLinkedin = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -119,6 +133,12 @@ export const Login = ({
             to start your photoshoot.
           </p>
           <Button
+            onClick={signInWithApple}
+            className="font-semibold bg-gray-500  hover:bg-gray-600 p-6 ">
+            <AiOutlineApple size={24} />
+            Continue with Apple
+          </Button>
+          <Button
             onClick={signInWithGoogle}
             className="font-semibold bg-blue-500  hover:bg-blue-600 p-6 ">
             <AiOutlineGoogle size={24} />
@@ -130,26 +150,7 @@ export const Login = ({
             <AiOutlineLinkedin size={24} />
             Continue with Linkedin
           </Button>
-          <div>
-            {" "}
-            <p className="text-sm text-gray-500 italic">
-              Trusted by professionals worldwide. Quick and efficient.
-            </p>
-          </div>
-          <div className="pt-6 text-sm text-gray-500">
-            {" "}
-            ✅ 14 days money back guarantee <br />
-            ✅ Livechat 24 hrs available <br />
-            ✅ Done in 1 hour. fast turn around <br />
-          </div>
-          {/*   <Button
-            onClick={signInWithFacebook}
-            variant={"default"}
-            className="font-semibold">
-            <AiOutlineFacebook size={20} />
-            Continue with Facebook
-          </Button>
-          {/* <OR />
+          <OR />
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col gap-2">
@@ -189,7 +190,19 @@ export const Login = ({
               type="submit">
               Continue with Email
             </Button>
-          </form>*/}
+          </form>
+          <div>
+            {" "}
+            <p className="text-sm text-gray-500 italic">
+              Trusted by professionals worldwide. Quick and efficient.
+            </p>
+          </div>
+          <div className="pt-6 text-sm text-gray-500">
+            {" "}
+            ✅ 14 days money back guarantee <br />
+            ✅ Livechat 24 hrs available <br />
+            ✅ Done in 1 hour. fast turn around <br />
+          </div>
         </div>
       </div>
     </>

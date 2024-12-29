@@ -1,13 +1,10 @@
 "use client";
-
-import { useState } from "react";
-import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Gallery from "./gallery";
 
 export default () => {
-  const [state, setState] = useState(false);
-
+  const { t } = useTranslation();
   // Replace javascript:void(0) path with your path
   const navigation = [
     { title: "Customers", path: "javascript:void(0)" },
@@ -27,12 +24,12 @@ export default () => {
         </div>
         <div className="text-center pb-4 space-y-4">
           <h2 className="text-4xl text-slate-800 font-bold mx-auto md:text-5xl">
-            <span className="text-blue-500">Professional</span> headshots
-            without a photographer.{" "}
+            {t("header")}
           </h2>
-          <p className="max-w-2xl text-lg mx-auto text-gray-700">
-            Elevate your online presence with studio-quality AI headshots.{" "}
-            <br /> No need to arrange a time-consuming photoshoot.
+          <p className="text-lg">
+            {t("subheader")}
+            <br />
+            {t("subheaderbr")}
           </p>
         </div>
         <div>
