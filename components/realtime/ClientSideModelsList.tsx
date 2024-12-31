@@ -79,11 +79,11 @@ export default function ClientSideModelsList({
         <div className="flex flex-col gap-4 items-center">
           <FaImages size={64} className="text-gray-500" />
           <h1 className="text-2xl">
-            Get started by buying{" "}
+            Get started by buying 👉
             <Link className="text-blue-500" href="/get-credits">
               Credits here
             </Link>
-            to train your first model.
+            &nbsp; to train your first model.
           </h1>
           <div>
             <Link
