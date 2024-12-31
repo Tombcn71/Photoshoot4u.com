@@ -62,10 +62,14 @@ export default function ClientSideModelsList({
         <div className="flex flex-col gap-4">
           <div className="flex flex-row gap-4 w-full justify-between items-center text-center">
             <h1>Your models</h1>
-            <Link href={packsIsEnabled ? "/overview/packs" : "/overview/models/train/raw-tune"} className="w-fit">
-              <Button size={"sm"}>
-                Train model
-              </Button>
+            <Link
+              href={
+                packsIsEnabled
+                  ? "/overview/packs"
+                  : "/overview/models/train/raw-tune"
+              }
+              className="w-fit">
+              <Button size={"sm"}>Train model</Button>
             </Link>
           </div>
           <ModelsTable models={models} />
@@ -75,10 +79,19 @@ export default function ClientSideModelsList({
         <div className="flex flex-col gap-4 items-center">
           <FaImages size={64} className="text-gray-500" />
           <h1 className="text-2xl">
-            Get started by training your first model.
+            Get started by buying{" "}
+            <Link className="text-blue-500" href="/get-credits">
+              Credits here
+            </Link>
+            to train your first model.
           </h1>
           <div>
-            <Link href={packsIsEnabled ? "/overview/packs" : "/overview/models/train/raw-tune"}>
+            <Link
+              href={
+                packsIsEnabled
+                  ? "/overview/packs"
+                  : "/overview/models/train/raw-tune"
+              }>
               <Button size={"lg"}>Train model</Button>
             </Link>
           </div>
