@@ -80,7 +80,7 @@ export default function ClientSideModelsList({
           <FaImages size={64} className="text-gray-500" />
           <h1 className="text-2xl">
             Get started by buying 👉
-            <Link className="text-blue-500" href="/get-credits">
+            <Link className="text-blue-500 hover:blue 300" href="/get-credits">
               Credits here
             </Link>
             &nbsp; to train your first model.
