@@ -24,12 +24,12 @@ export default () => {
         </div>
         <div className="text-center pb-4 space-y-4">
           <h2 className="text-4xl text-slate-800 font-bold mx-auto md:text-5xl">
-            Professional headshots without a photographer.
+            Create professional headshots with A.I✨
           </h2>
           <p className="text-lg">
-            Elevate your online presence with studio-quality AI headshots.
+            Elevate your online presence with studio-quality AI headshots
             <br />
-            No need to arrange a time-consuming photoshoot.
+            ideal for social profiles, resumes, and professional portfolios.{" "}
           </p>
         </div>
         <div>
