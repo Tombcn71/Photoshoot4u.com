@@ -137,7 +137,9 @@ export default async function Navbar() {
             </div>{" "}
           </>
         )}
-        <LanguageChanger />
+        <div className="md:block hidden ">
+          <LanguageChanger />
+        </div>
         <Sheet>
           <div className=" md:hidden ">
             <SheetTrigger>
@@ -149,6 +151,10 @@ export default async function Navbar() {
                 <div className="overflow-anchor: none;">
                   <ul>
                     <li className="flex flex-col pt-4   ">
+                      {" "}
+                      <div className="px-2">
+                        <LanguageChanger />
+                      </div>
                       <Link href="/#How" className="items-cemter">
                         <Button
                           variant={"ghost"}
@@ -168,7 +174,6 @@ export default async function Navbar() {
                           Faq
                         </Button>
                       </Link>
-
                       <SheetClose asChild>
                         {!user && (
                           <Link href="/login" className="pl-4 pt-4">
