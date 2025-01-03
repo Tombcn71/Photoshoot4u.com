@@ -7,9 +7,9 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "i18nexus pull && next dev",
+    "build": "i18nexus pull && next build",
+    "start": "i18nexus pull && next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -53,7 +53,6 @@
     "g": "^2.0.1",
     "i18next": "^24.2.0",
     "i18next-resources-to-backend": "^1.2.1",
-    "i18nexus-cli": "^3.5.0",
     "lucide-react": "^0.274.0",
     "next": "^14.1.4",
     "next-i18n-router": "^5.5.1",
@@ -66,10 +65,10 @@
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-hook-form": "^7.46.1",
-    "react-i18next": "^15.2.0",
+    "react-i18next": "^15.4.0",
     "react-icons": "^4.11.0",
     "resend": "^3.2.0",
-    "shadcn": "^2.1.8",
+    "shadcn": "^1.0.0",
     "sheet": "^0.2.0",
     "stripe": "^13.6.0",
     "supports-color": "^9.4.0",
@@ -85,6 +84,7 @@
     "@types/node": "22.4.0",
     "@types/react": "18.3.3",
     "@types/react-dom": "18.2.5",
-    "encoding": "^0.1.13"
+    "encoding": "^0.1.13",
+    "i18nexus-cli": "^3.5.0"
   }
 }
