@@ -98,7 +98,6 @@ export default async function Navbar() {
         )}{" "}
         <div className=" flex gap-4 lg:ml-auto scroll-smooth">
           {" "}
-          <LanguageChanger />
           {user && (
             <div className="flex flex-row gap-4 text-center align-middle justify-center">
               {stripeIsConfigured && (
@@ -126,7 +125,6 @@ export default async function Navbar() {
             </div>
           )}{" "}
         </div>{" "}
-        <div className="flex justify-end space-x-14"> </div>
         {!user && (
           <>
             <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
@@ -139,6 +137,7 @@ export default async function Navbar() {
             </div>{" "}
           </>
         )}
+        <LanguageChanger />
         <Sheet>
           <div className=" md:hidden ">
             <SheetTrigger>
