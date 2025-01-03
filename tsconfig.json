@@ -28,7 +28,7 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/[locale]/page.tsx",
+    "app/[locale]/page.js",
     "i18nConFig.js",
     "app/[locale]/layout.js"
   ],

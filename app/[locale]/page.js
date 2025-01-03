@@ -14,7 +14,7 @@ const i18nNamespaces = ["home"];
 export const dynamic = "force-dynamic";
 
 export default async function Index({ params: { locale } }) {
-  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+  const { t, resources } = await initTranslations(locale, ["home"]);
 
   const supabase = createServerComponentClient({ cookies });
 
