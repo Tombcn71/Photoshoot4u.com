@@ -125,53 +125,6 @@ export default async function Navbar() {
               </DropdownMenu>
             </div>
           )}{" "}
-          <Sheet>
-            <div className=" md:hidden ">
-              <SheetTrigger>
-                <MenuIcon className="mr-2 mt-3" />
-              </SheetTrigger>
-              <div className="">
-                <SheetContent className="w-[220px] h-[250px] text-black p-1 text-align: leftsm:w-[240px]">
-                  {" "}
-                  <div className="overflow-anchor: none;">
-                    <ul>
-                      <li className="flex flex-col pt-4   ">
-                        <Link href="/#How" className="items-cemter">
-                          <Button
-                            variant={"ghost"}
-                            className="text-l	text-align: left">
-                            How it works
-                          </Button>
-                        </Link>
-                        <Link href="/#Pricing" className="items-cemter">
-                          <Button
-                            variant={"ghost"}
-                            className="text-l	text-align: left">
-                            Pricing
-                          </Button>
-                        </Link>
-                        <Link href="/#Faq">
-                          <Button variant={"ghost"} className="text-l	">
-                            Faq
-                          </Button>
-                        </Link>
-
-                        <SheetClose asChild>
-                          {!user && (
-                            <Link href="/login" className="pl-4 pt-4">
-                              <Button className="bg-blue-600 hover:bg-blue-500 pl-4">
-                                Login / Register
-                              </Button>
-                            </Link>
-                          )}
-                        </SheetClose>
-                      </li>
-                    </ul>
-                  </div>{" "}
-                </SheetContent>{" "}
-              </div>
-            </div>
-          </Sheet>
         </div>{" "}
         <div className="flex justify-end space-x-14"> </div>
         {!user && (
@@ -186,6 +139,53 @@ export default async function Navbar() {
             </div>{" "}
           </>
         )}
+        <Sheet>
+          <div className=" md:hidden ">
+            <SheetTrigger>
+              <MenuIcon className="mr-2 mt-3" />
+            </SheetTrigger>
+            <div className="">
+              <SheetContent className="w-[220px] h-[250px] text-black p-1 text-align: leftsm:w-[240px]">
+                {" "}
+                <div className="overflow-anchor: none;">
+                  <ul>
+                    <li className="flex flex-col pt-4   ">
+                      <Link href="/#How" className="items-cemter">
+                        <Button
+                          variant={"ghost"}
+                          className="text-l	text-align: left">
+                          How it works
+                        </Button>
+                      </Link>
+                      <Link href="/#Pricing" className="items-cemter">
+                        <Button
+                          variant={"ghost"}
+                          className="text-l	text-align: left">
+                          Pricing
+                        </Button>
+                      </Link>
+                      <Link href="/#Faq">
+                        <Button variant={"ghost"} className="text-l	">
+                          Faq
+                        </Button>
+                      </Link>
+
+                      <SheetClose asChild>
+                        {!user && (
+                          <Link href="/login" className="pl-4 pt-4">
+                            <Button className="bg-blue-600 hover:bg-blue-500 pl-4">
+                              Login / Register
+                            </Button>
+                          </Link>
+                        )}
+                      </SheetClose>
+                    </li>
+                  </ul>
+                </div>{" "}
+              </SheetContent>{" "}
+            </div>
+          </div>
+        </Sheet>
       </div>
     </>
   );
