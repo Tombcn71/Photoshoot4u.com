@@ -7,12 +7,15 @@ import Gallery from "@/components/gallery";
 import Hero5 from "@/components/Hero5";
 import Faq from "@/components/Faq";
 import PricingSection from "@/components/PricingSection";
+import initTranslations from "../i18n";
 
 const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
 
-export default async function Index() {
+export default async function Index({ params: { locale } }) {
+  const { t, resources } = await initTranslations(locale, i18nNamespaces);
+
   const supabase = createServerComponentClient({ cookies });
 
   const {
@@ -26,7 +29,14 @@ export default async function Index() {
   return (
     <>
       <>
-        <Hero5 /> <Gallery /> <ExplainerSection />
+        <TranslationsProvider
+          namespaces={i18nNamespaces}
+          locale={locale}
+          resources={resources}>
+          <Hero5 /> <Gallery /> <ExplainerSection />
+          <Faq />
+          <PricingSection />{" "}
+        </TranslationsProvider>
       </>
     </>
   );

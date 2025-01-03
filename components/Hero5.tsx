@@ -24,7 +24,7 @@ export default () => {
         </div>
         <div className="text-center pb-4 space-y-4">
           <h2 className="text-4xl text-slate-800 font-bold mx-auto md:text-5xl">
-            Create professional headshots with A.I✨
+            {t("header")}✨
           </h2>
           <p className="text-lg">
             Elevate your online presence with studio-quality AI headshots

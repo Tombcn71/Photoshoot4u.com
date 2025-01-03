@@ -1,7 +1,7 @@
 import { AvatarIcon, Pencil1Icon } from "@radix-ui/react-icons";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
-
+import LanguageChanger from "@/components/LanguageChanger";
 import {
   MenuIcon,
   CreditCard,
@@ -55,134 +55,138 @@ export default async function Navbar() {
     .single();
 
   return (
-    <div className=" flex w-full px-4 lg:px-40 py-4  border-b text-center gap-8 justify-between ">
-      {!user && (
-        <div className="flex gap-2 h-full ">
-          <Link href="/">
-            <h2 className=" font-medium  text-2xl items-center   flex">
-              <Image src="/logo.png" width={30} height={30} alt="Logo" />{" "}
-              <span className=" mt-1 ml-1 pb-1 px-2 lg:text">
-                Photoshoot 4u
-              </span>{" "}
-            </h2>
-          </Link>
-        </div>
-      )}
-      {!user && (
-        <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
-          <Link href="/#How">
-            <Button variant={"ghost"}>How it works</Button>
-          </Link>
-          <Link href="/#Faq ">
-            <Button variant={"ghost"}>Faq</Button>
-          </Link>
-          <Link href="/#Pricing">
-            <Button variant={"ghost"}>Pricing</Button>
-          </Link>{" "}
-        </div>
-      )}
-      {user && packsIsEnabled && (
-        <Link href="/overview/packs">
-          <Button variant={"ghost"}>Packs</Button>
-        </Link>
-      )}
-      {user && (
-        <div className=" flex flex-row lg:ml-auto  gap-2 ">
-          {stripeIsConfigured && (
-            <Link href="/get-credits">
-              <Button variant={"ghost"}>Buy credits</Button>
+    <>
+      <div className=" flex w-full px-4 lg:px-40 py-4  border-b text-center gap-8 justify-between ">
+        {!user && (
+          <div className="flex gap-2 h-full ">
+            <Link href="/">
+              <h2 className=" font-medium  text-2xl items-center   flex">
+                <Image src="/logo.png" width={30} height={30} alt="Logo" />{" "}
+                <span className=" mt-1 ml-1 pb-1 px-2 lg:text">
+                  Photoshoot 4u
+                </span>{" "}
+              </h2>
             </Link>
-          )}
-        </div>
-      )}{" "}
-      <div className=" flex gap-4 lg:ml-auto scroll-smooth">
+          </div>
+        )}
+        {!user && (
+          <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
+            <Link href="/#How">
+              <Button variant={"ghost"}>How it works</Button>
+            </Link>
+            <Link href="/#Faq ">
+              <Button variant={"ghost"}>Faq</Button>
+            </Link>
+            <Link href="/#Pricing">
+              <Button variant={"ghost"}>Pricing</Button>
+            </Link>{" "}
+          </div>
+        )}
+        {user && packsIsEnabled && (
+          <Link href="/overview/packs">
+            <Button variant={"ghost"}>Packs</Button>
+          </Link>
+        )}
         {user && (
-          <div className="flex flex-row gap-4 text-center align-middle justify-center">
+          <div className=" flex flex-row lg:ml-auto  gap-2 ">
             {stripeIsConfigured && (
-              <ClientSideCredits creditsRow={credits ? credits : null} />
+              <Link href="/get-credits">
+                <Button variant={"ghost"}>Buy credits</Button>
+              </Link>
             )}
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild className="cursor-pointer">
-                <AvatarIcon height={24} width={24} className="text-sky-600" />
-              </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56">
-                <DropdownMenuLabel className="text-primary text-center overflow-hidden text-ellipsis">
-                  {user.email}
-                </DropdownMenuLabel>
-                <DropdownMenuSeparator />
-                <form action="/auth/sign-out" method="post">
-                  <Button
-                    type="submit"
-                    className="w-full text-left"
-                    variant={"ghost"}>
-                    Uitloggen
-                  </Button>
-                </form>
-              </DropdownMenuContent>
-            </DropdownMenu>
           </div>
         )}{" "}
-        <Sheet>
-          <div className=" md:hidden ">
-            <SheetTrigger>
-              <MenuIcon className="mr-2 mt-3" />
-            </SheetTrigger>
-            <div className="">
-              <SheetContent className="w-[220px] h-[250px] text-black p-1 text-align: leftsm:w-[240px]">
-                {" "}
-                <div className="overflow-anchor: none;">
-                  <ul>
-                    <li className="flex flex-col pt-4   ">
-                      <Link href="/#How" className="items-cemter">
-                        <Button
-                          variant={"ghost"}
-                          className="text-l	text-align: left">
-                          How it works
-                        </Button>
-                      </Link>
-                      <Link href="/#Pricing" className="items-cemter">
-                        <Button
-                          variant={"ghost"}
-                          className="text-l	text-align: left">
-                          Pricing
-                        </Button>
-                      </Link>
-                      <Link href="/#Faq">
-                        <Button variant={"ghost"} className="text-l	">
-                          Faq
-                        </Button>
-                      </Link>
-
-                      <SheetClose asChild>
-                        {!user && (
-                          <Link href="/login" className="pl-4 pt-4">
-                            <Button className="bg-blue-600 hover:bg-blue-500 pl-4">
-                              Login / Register
-                            </Button>
-                          </Link>
-                        )}
-                      </SheetClose>
-                    </li>
-                  </ul>
-                </div>{" "}
-              </SheetContent>{" "}
+        <div className=" flex gap-4 lg:ml-auto scroll-smooth">
+          {" "}
+          <LanguageChanger />
+          {user && (
+            <div className="flex flex-row gap-4 text-center align-middle justify-center">
+              {stripeIsConfigured && (
+                <ClientSideCredits creditsRow={credits ? credits : null} />
+              )}
+              <DropdownMenu>
+                <DropdownMenuTrigger asChild className="cursor-pointer">
+                  <AvatarIcon height={24} width={24} className="text-sky-600" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent className="w-56">
+                  <DropdownMenuLabel className="text-primary text-center overflow-hidden text-ellipsis">
+                    {user.email}
+                  </DropdownMenuLabel>
+                  <DropdownMenuSeparator />
+                  <form action="/auth/sign-out" method="post">
+                    <Button
+                      type="submit"
+                      className="w-full text-left"
+                      variant={"ghost"}>
+                      Uitloggen
+                    </Button>
+                  </form>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
-          </div>
-        </Sheet>
-      </div>{" "}
-      <div className="flex justify-end space-x-14"> </div>
-      {!user && (
-        <>
-          <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
-            <Link href="/login">
-              <Button className="bg-white hover:bg-gray-100    border text-black">
-                {" "}
-                Login / Register
-              </Button>
-            </Link>{" "}
-          </div>{" "}
-        </>
-      )}
-    </div>
+          )}{" "}
+          <Sheet>
+            <div className=" md:hidden ">
+              <SheetTrigger>
+                <MenuIcon className="mr-2 mt-3" />
+              </SheetTrigger>
+              <div className="">
+                <SheetContent className="w-[220px] h-[250px] text-black p-1 text-align: leftsm:w-[240px]">
+                  {" "}
+                  <div className="overflow-anchor: none;">
+                    <ul>
+                      <li className="flex flex-col pt-4   ">
+                        <Link href="/#How" className="items-cemter">
+                          <Button
+                            variant={"ghost"}
+                            className="text-l	text-align: left">
+                            How it works
+                          </Button>
+                        </Link>
+                        <Link href="/#Pricing" className="items-cemter">
+                          <Button
+                            variant={"ghost"}
+                            className="text-l	text-align: left">
+                            Pricing
+                          </Button>
+                        </Link>
+                        <Link href="/#Faq">
+                          <Button variant={"ghost"} className="text-l	">
+                            Faq
+                          </Button>
+                        </Link>
+
+                        <SheetClose asChild>
+                          {!user && (
+                            <Link href="/login" className="pl-4 pt-4">
+                              <Button className="bg-blue-600 hover:bg-blue-500 pl-4">
+                                Login / Register
+                              </Button>
+                            </Link>
+                          )}
+                        </SheetClose>
+                      </li>
+                    </ul>
+                  </div>{" "}
+                </SheetContent>{" "}
+              </div>
+            </div>
+          </Sheet>
+        </div>{" "}
+        <div className="flex justify-end space-x-14"> </div>
+        {!user && (
+          <>
+            <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
+              <Link href="/login">
+                <Button className="bg-white hover:bg-gray-100    border text-black">
+                  {" "}
+                  Login / Register
+                </Button>
+              </Link>{" "}
+            </div>{" "}
+          </>
+        )}
+      </div>
+    </>
   );
 }

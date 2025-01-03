@@ -5,16 +5,28 @@ import "./globals.css";
 import { Suspense } from "react";
 import { Analytics } from "@vercel/analytics/react";
 import dynamic from "next/dynamic";
+import i18nConfig from "@/i18nConfig";
+import { dir } from "i18next";
+
 export const metadata = {
   title: "Professional headshots without a photographer | Photoshoot4u",
   description:
     "Elevate your online presence with studio-quality AI headshots. No need to arrange a time-consuming photoshoot",
 };
+export function generateStaticParams() {
+  return i18nConfig.locales.map((locale) => ({ locale }));
+}
 const CrispWithNoSSR = dynamic(() => import("../../components/crisp"));
 
-export default function RootLayout({ children }: any) {
+export default function RootLayout({
+  children,
+  params: { locale },
+}: {
+  children: any;
+  params: { locale: string };
+}) {
   return (
-    <html lang="en" className=" scroll-smooth">
+    <html lang={locale} dir={dir(locale)} className=" scroll-smooth">
       <body className="min-h-screen flex flex-col">
         <section>
           <Suspense
