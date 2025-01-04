@@ -11,7 +11,7 @@ export default function ExplainerSection() {
   return (
     <div className="w-full max-w-6xl mt-16 p-8 bg-gray-100 rounded-lg space-y-8">
       <h2 id="How" className="text-3xl font-bold text-center mb-8">
-        How It Works{" "}
+        {t("explainersection")}{" "}
       </h2>
 
       {/* Step 1: Upload your images */}
@@ -21,15 +21,13 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-blue-600 bg-white border-2 border-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
             1
           </div>
-          <h3 className="text-2xl font-semibold">Upload your images</h3>
+          <h3 className="text-2xl font-semibold">{t("1upload")}</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Upload 10 high-quality images: Use some shoulders-up images. And some
-          waist-up images.
+          {t("1text0")}
+          <br /> {t("1text")}
           <br />
-          Taken on different days, with different backgrounds and clothes,
-          <br /> Looking at the camera, front facing, 1 person in frame, no
-          sunglasses or hats.
+          {t("howline2")} <br /> {t("howline3")}
         </p>
         <img
           src={voorbeeld1.src}
@@ -44,11 +42,9 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-blue-600 bg-white border-2 border-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
             2
           </div>
-          <h3 className="text-2xl font-semibold"> Our AI gets to work</h3>
+          <h3 className="text-2xl font-semibold"> {t("2text")}</h3>
         </div>
-        <p className="text-sm text-gray-600 text-center">
-          The AI magic takes ~60 minutes. You'll get an email when its ready!
-        </p>
+        <p className="text-sm text-gray-600 text-center">{t("2textbr")} </p>
         <img
           src={wazig1.src}
           alt="AI Headshot blur"
@@ -62,14 +58,12 @@ export default function ExplainerSection() {
           <div className="text-3xl font-bold text-blue-600 bg-white border-2 border-blue-600 rounded-full w-10 h-10 flex items-center justify-center">
             3
           </div>
-          <h3 className="text-2xl font-semibold">Get amazing headshots</h3>
+          <h3 className="text-2xl font-semibold">{t("view")}</h3>
         </div>
         <p className="text-sm text-gray-600 text-center">
-          Click on the link in the email.
-          <br />
-          On the training page, click on the "finished" batch.
-          <br />
-          Now download your photos!
+          {t("3textbr1")} <br />
+          {t("3textbr2")} <br />
+          {t("3textbr3")}{" "}
         </p>
 
         <img

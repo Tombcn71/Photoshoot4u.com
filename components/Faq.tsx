@@ -12,10 +12,10 @@ export default () => {
         <div className="flex-1">
           <div className="max-w-lg mb-10">
             <h3 id="Faq" className="font-semibold text-indigo-600">
-              Frequently asked questions
+              {t("faq")}{" "}
             </h3>
             <p className="mt-3 text-gray-800 text-3xl font-extrabold sm:text-4xl">
-              All information you need to know
+              {t("all")}{" "}
             </p>
           </div>
           <Image
@@ -29,7 +29,7 @@ export default () => {
           <ul className="space-y-4 divide-y">
             <li className="py-5">
               <summary className="flex items-center justify-between font-semibold text-gray-700">
-                Can this replace a real photo shoot?{" "}
+                {t("q1")}{" "}
               </summary>
               <p className="mt-3 text-gray-600 leading-relaxed">{t("a1")} </p>
             </li>

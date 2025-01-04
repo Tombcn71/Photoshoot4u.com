@@ -82,16 +82,6 @@ export const Login = ({
 
     console.log(data, error);
   };
-  const signInWithApple = async () => {
-    const { data, error } = await supabase.auth.signInWithOAuth({
-      provider: "apple",
-      options: {
-        redirectTo: redirectUrl,
-      },
-    });
-
-    console.log(data, error);
-  };
 
   const signInWithLinkedin = async () => {
     const { data, error } = await supabase.auth.signInWithOAuth({
@@ -132,12 +122,6 @@ export const Login = ({
             Sign in to get started. Then you can buy credits and upload images
             to start your photoshoot.
           </p>
-          <Button
-            onClick={signInWithApple}
-            className="font-semibold bg-gray-500  hover:bg-gray-600 p-6 ">
-            <AiOutlineApple size={24} />
-            Continue with Apple
-          </Button>
           <Button
             onClick={signInWithGoogle}
             className="font-semibold bg-blue-500  hover:bg-blue-600 p-6 ">

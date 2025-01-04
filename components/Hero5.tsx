@@ -27,9 +27,8 @@ export default () => {
             {t("header")}✨
           </h2>
           <p className="text-lg">
-            Elevate your online presence with studio-quality AI headshots
-            <br />
-            ideal for social profiles, resumes, and professional portfolios.{" "}
+            {t("subheader")} <br />
+            {t("subheaderbr2")}
           </p>
         </div>
         <div>
@@ -37,7 +36,7 @@ export default () => {
             <Link href="/login">
               {" "}
               <button className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-3xl">
-                Get your headshots{" "}
+                {t("button")}
               </button>
             </Link>
           </p>

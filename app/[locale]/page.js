@@ -8,7 +8,7 @@ import Hero5 from "@/components/Hero5";
 import Faq from "@/components/Faq";
 import PricingSection from "@/components/PricingSection";
 import initTranslations from "../i18n";
-
+import Footer from "@/components/Footer";
 const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
@@ -35,7 +35,7 @@ export default async function Index({ params: { locale } }) {
           resources={resources}>
           <Hero5 /> <Gallery /> <ExplainerSection />
           <Faq />
-          <PricingSection />{" "}
+          <PricingSection /> <Footer />
         </TranslationsProvider>
       </>
     </>

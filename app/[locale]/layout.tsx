@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import { Toaster } from "@/components/ui/toaster";
 import "./globals.css";
@@ -7,6 +6,8 @@ import { Analytics } from "@vercel/analytics/react";
 import dynamic from "next/dynamic";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
+import TranslationsProvider from "@/components/TranslationsProvider";
+import initTranslations from "../i18n";
 
 export const metadata = {
   title: "Professional headshots without a photographer | Photoshoot4u",
@@ -40,7 +41,6 @@ export default function RootLayout({
         <main className="flex flex-1 flex-col items-center py-16">
           {children}
         </main>
-        <Footer />
         <Toaster />
         <Analytics />
       </body>

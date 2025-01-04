@@ -1,8 +1,12 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
-function footer3() {
+const Footer = () => {
+  const { t } = useTranslation();
+
   return (
     <div>
       <footer className=" text-black border-t-2 border-gray">
@@ -20,9 +24,7 @@ function footer3() {
           </div>
 
           <p className="mx-auto mt-6 max-w-md text-center leading-relaxed text-black">
-            Our mission is to make Headshot photography accessible for everyone.
-            With photoshoot 4u we significantly reduce the cost and time
-            consumption of traditional photoshoots.
+            {t("mission")}
           </p>
           <ul className="mt-12 flex flex-wrap justify-center text-black gap-6 md:gap-8 lg:gap-12">
             <Link href="/Privacy">Privacypolicy</Link>
@@ -76,6 +78,6 @@ function footer3() {
       </footer>
     </div>
   );
-}
+};
 
-export default footer3;
+export default Footer;
