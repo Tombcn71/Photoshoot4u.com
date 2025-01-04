@@ -99,7 +99,7 @@ export default async function Navbar() {
         <div className=" flex gap-4 lg:ml-auto scroll-smooth">
           {" "}
           {user && (
-            <div className="flex flex-row gap-4 text-center align-middle pt-2 justify-center">
+            <div className="flex flex-row gap-4 text-center align-middle pt-1 justify-center">
               {stripeIsConfigured && (
                 <ClientSideCredits creditsRow={credits ? credits : null} />
               )}
