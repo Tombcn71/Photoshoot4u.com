@@ -70,7 +70,7 @@ export default function ClientSideModelsList({
                   : "/overview/models/train/raw-tune"
               }
               className="w-fit">
-              <Button size={"sm"}>{t("train_model")}</Button>
+              <Button size={"sm"}>{t("trainmodel")}</Button>
             </Link>
           </div>
           <ModelsTable models={models} />
@@ -80,9 +80,9 @@ export default function ClientSideModelsList({
         <div className="flex flex-col gap-4 items-center">
           <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
           <h1 className="text-2xl">
-            {t("get_started_by_buying")} &nbsp;
+            {t("getstarted")} &nbsp;
             <Link className="text-blue-500 hover:blue 300" href="/get-credits">
-              {t("credits_here")}
+              {t("credits")}
             </Link>
             &nbsp; {t("to_train_your_first_model")}.
           </h1>
