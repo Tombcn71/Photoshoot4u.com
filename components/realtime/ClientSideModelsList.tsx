@@ -1,11 +1,10 @@
-"use client";
+import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Database } from "@/types/supabase";
 import { modelRowWithSamples } from "@/types/utils";
 import { createClient } from "@supabase/supabase-js";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import { FaImages } from "react-icons/fa";
 import ModelsTable from "../ModelsTable";
 
 const packsIsEnabled = process.env.NEXT_PUBLIC_TUNE_TYPE === "packs";
@@ -19,6 +18,7 @@ type ClientSideModelsListProps = {
 export default function ClientSideModelsList({
   serverModels,
 }: ClientSideModelsListProps) {
+  const { t } = useTranslation();
   const supabase = createClient<Database>(
     process.env.NEXT_PUBLIC_SUPABASE_URL as string,
     process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY as string
@@ -61,7 +61,7 @@ export default function ClientSideModelsList({
       {models && models.length > 0 && (
         <div className="flex flex-col gap-4">
           <div className="flex flex-row gap-4 w-full justify-between items-center text-center">
-            <h1>Your models</h1>
+            <h1>{t("your_models")}</h1>
             <Link
               href={
                 packsIsEnabled
@@ -69,7 +69,7 @@ export default function ClientSideModelsList({
                   : "/overview/models/train/raw-tune"
               }
               className="w-fit">
-              <Button size={"sm"}>Train model</Button>
+              <Button size={"sm"}>{t("train_model")}</Button>
             </Link>
           </div>
           <ModelsTable models={models} />
@@ -77,13 +77,13 @@ export default function ClientSideModelsList({
       )}
       {models && models.length === 0 && (
         <div className="flex flex-col gap-4 items-center">
-          <FaImages size={64} className="text-gray-500" />
+          <div className="bg-gray-200 border-2 border-dashed rounded-xl w-16 h-16" />
           <h1 className="text-2xl">
-            Get started by buying 👉
+            {t("get_started_by_buying")} &nbsp;
             <Link className="text-blue-500 hover:blue 300" href="/get-credits">
-              Credits here
+              {t("credits_here")}
             </Link>
-            &nbsp; to train your first model.
+            &nbsp; {t("to_train_your_first_model")}.
           </h1>
           <div>
             <Link
@@ -92,7 +92,7 @@ export default function ClientSideModelsList({
                   ? "/overview/packs"
                   : "/overview/models/train/raw-tune"
               }>
-              <Button size={"lg"}>Train model</Button>
+              <Button size={"lg"}>{t("train_model2")}</Button>
             </Link>
           </div>
         </div>
