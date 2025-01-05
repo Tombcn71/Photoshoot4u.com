@@ -31,7 +31,8 @@
     "app/[locale]/page.js",
     "i18nConFig.js",
     "app/[locale]/layout.js",
-    "components/Footer.tsx"
+    "components/Footer.tsx",
+    "app/[locale]/overview/page.js"
   ],
   "exclude": ["node_modules"]
 }

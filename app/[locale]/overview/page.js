@@ -1,12 +1,15 @@
+import initTranslations from "@/app/i18n";
 import ClientSideModelsList from "@/components/realtime/ClientSideModelsList";
 import { Database } from "@/types/supabase";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
+const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
 
-export default async function Index() {
+export default async function Index({ params: { locale } }) {
   const supabase = createServerComponentClient<Database>({ cookies });
+  const { t, resources } = await initTranslations(locale, ["home"]);
 
   const {
     data: { user },
