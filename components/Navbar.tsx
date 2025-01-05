@@ -137,7 +137,7 @@ export default async function Navbar() {
             </div>{" "}
           </>
         )}
-        <div className="md:block hidden pt-1 ">
+        <div className="md:block hidden pt-2 ">
           <LanguageChanger />
         </div>
         <Sheet>
