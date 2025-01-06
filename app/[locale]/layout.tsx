@@ -6,8 +6,7 @@ import { Analytics } from "@vercel/analytics/react";
 import dynamic from "next/dynamic";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
-import TranslationsProvider from "@/components/TranslationsProvider";
-import initTranslations from "../i18n";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
   title: "Professional headshots without a photographer | Photoshoot4u",
@@ -28,6 +27,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang={locale} dir={dir(locale)} className=" scroll-smooth">
+      {" "}
+      <GoogleTagManager
+        gtmId="
+GTM-MH2K6TPL"
+      />
       <body className="min-h-screen flex flex-col">
         <section>
           <Suspense

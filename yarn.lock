@@ -122,10 +122,10 @@
   resolved "https://registry.npmjs.org/@next/swc-darwin-arm64/-/swc-darwin-arm64-14.2.21.tgz"
   integrity sha512-HwEjcKsXtvszXz5q5Z7wCtrHeTTDSTgAbocz45PHMUjU3fBYInfvhR+ZhavDRUYLonm53aHZbB09QtJVJj8T7g==
 
-"@next/third-parties@^14.2.11":
-  version "14.2.21"
-  resolved "https://registry.npmjs.org/@next/third-parties/-/third-parties-14.2.21.tgz"
-  integrity sha512-Q45S8E3pABEoN3bN/s5eHGgcSNqB/ys7cstGaO9C5W5WB1z3iUVzs+eZ1iBIq2B1HbWmgKZzp1vLfvNbyJGAOA==
+"@next/third-parties@^15.1.3":
+  version "15.1.3"
+  resolved "https://registry.npmjs.org/@next/third-parties/-/third-parties-15.1.3.tgz"
+  integrity sha512-nz2mthh08xMRgNKRA+Z7lM1BqHqukGcFyu5z0nXFo3/KXsBgaPJkfnkfebw/YTqkxryV+aEttf/iAWDB6dUO6A==
   dependencies:
     third-party-capital "1.0.20"
 
