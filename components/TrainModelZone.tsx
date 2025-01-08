@@ -62,11 +62,11 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
         ) || [];
 
       // if user tries to upload more than 10 files, display a toast
-      if (newFiles.length + files.length > 10) {
+      if (newFiles.length + files.length > 6) {
         toast({
           title: "Too many images",
           description:
-            "You can only upload up to 10 images in total. Please try again.",
+            "You can only upload up to 6 images in total. Please try again.",
           duration: 5000,
         });
         return;
@@ -135,7 +135,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
       urls: blobUrls,
       name: form.getValues("name").trim(),
       type: form.getValues("type"),
-      pack: packSlug
+      pack: packSlug,
     };
 
     // Send the JSON payload to the "/astria/train-model" endpoint
@@ -196,8 +196,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(onSubmit)}
-          className="rounded-md flex flex-col gap-8"
-        >
+          className="rounded-md flex flex-col gap-8">
           <FormField
             control={form.control}
             name="name"
@@ -230,8 +229,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
               value={modelType}
               onValueChange={(value) => {
                 form.setValue("type", value);
-              }}
-            >
+              }}>
               <div>
                 <RadioGroupItem
                   value="man"
@@ -241,8 +239,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                 />
                 <Label
                   htmlFor="man"
-                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
-                >
+                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary">
                   <FaMale className="mb-3 h-6 w-6" />
                   Man
                 </Label>
@@ -257,8 +254,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                 />
                 <Label
                   htmlFor="woman"
-                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
-                >
+                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary">
                   <FaFemale className="mb-3 h-6 w-6" />
                   Woman
                 </Label>
@@ -272,8 +268,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                 />
                 <Label
                   htmlFor="person"
-                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary"
-                >
+                  className="flex flex-col items-center justify-between rounded-md border-2 border-muted bg-transparent p-4 hover:bg-accent hover:text-accent-foreground peer-data-[state=checked]:border-primary [&:has([data-state=checked])]:border-primary">
                   <FaRainbow className="mb-3 h-6 w-6" />
                   Unisex
                 </Label>
@@ -282,8 +277,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
           </div>
           <div
             {...getRootProps()}
-            className=" rounded-md justify-center align-middle cursor-pointer flex flex-col gap-4"
-          >
+            className=" rounded-md justify-center align-middle cursor-pointer flex flex-col gap-4">
             <FormLabel>Samples</FormLabel>
             <FormDescription>
               Upload 4-10 images of the person you want to generate headshots
@@ -315,8 +309,7 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
                     variant="outline"
                     size={"sm"}
                     className="w-full"
-                    onClick={() => removeFile(file)}
-                  >
+                    onClick={() => removeFile(file)}>
                     Remove
                   </Button>
                 </div>
