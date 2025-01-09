@@ -71,6 +71,9 @@ export default async function Navbar() {
         )}
         {!user && (
           <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
+            <Link href="/Examples">
+              <Button variant={"ghost"}>Examples</Button>
+            </Link>
             <Link href="/#How">
               <Button variant={"ghost"}>How it works</Button>
             </Link>
@@ -155,6 +158,13 @@ export default async function Navbar() {
                       <div className="px-2">
                         <LanguageChanger />
                       </div>
+                      <Link href="/Examples" className="items-cemter">
+                        <Button
+                          variant={"ghost"}
+                          className="text-l	text-align: left">
+                          Examples
+                        </Button>
+                      </Link>
                       <Link href="/#How" className="items-cemter">
                         <Button
                           variant={"ghost"}
