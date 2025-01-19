@@ -28,7 +28,7 @@ export default () => {
           </h2>
           <p className="text-lg">
             {t("subheader")} <br />
-            {t("subheaderbr2")}
+            {t("subheaderbr")}
           </p>
         </div>
         <div>

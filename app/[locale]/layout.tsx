@@ -9,9 +9,9 @@ import { dir } from "i18next";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
-  title: "Professional headshots without a photographer | Photoshoot4u",
+  title: "The AI headshot photographer for professionals | Photoshoot4u",
   description:
-    "Elevate your online presence with studio-quality AI headshots. No need to arrange a time-consuming photoshoot",
+    "Our cutting-edge AI technology captures stunning professional headshots in minutes right from the comfort of your own home or office",
 };
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
