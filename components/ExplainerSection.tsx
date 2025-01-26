@@ -9,7 +9,7 @@ export default function ExplainerSection() {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full max-w-6xl mt-16 p-8 bg-white rounded-lg space-y-8">
+    <div className="w-full max-w-6xl mt-16 p-8 bg-gray-100 rounded-lg space-y-8">
       <h2 id="How" className="text-3xl font-bold text-center mb-8">
         {t("explainersection")}{" "}
       </h2>

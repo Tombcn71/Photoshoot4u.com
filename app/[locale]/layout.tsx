@@ -33,7 +33,7 @@ export default function RootLayout({
         gtmId="
 GTM-MH2K6TPL"
       />
-      <body className="min-h-screen bg-stone-100 flex flex-col">
+      <body className="min-h-screen flex flex-col">
         <section>
           <Suspense
             fallback={
