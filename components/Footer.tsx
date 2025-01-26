@@ -32,7 +32,7 @@ const Footer = () => {
           </ul>
           <ul className="mt-12 flex justify-center gap-6 md:gap-8">
             <Link
-              href="https://www.instagram.com/AiFotosessie.nl/"
+              href="https://www.instagram.com/photoshoot4u_com/"
               className="group"
               aria-label="Instagram"
               target="_blank">
@@ -48,7 +48,7 @@ const Footer = () => {
             </Link>
 
             <Link
-              href="https://www.linkedin.com/company/AiFotosessie.nl/?viewAsMember=true"
+              href="https://www.linkedin.com/company/photoshoot4u/about/?viewAsMember=true"
               className="group"
               aria-label="Linkedin"
               target="_blank">
@@ -61,7 +61,7 @@ const Footer = () => {
               </svg>
             </Link>
             <Link
-              href="https://www.facebook.com/people/Fotosessieai/61559314530123/"
+              href="https://www.facebook.com/profile.php?viewas=100000686899395&id=61571469475841"
               className="group">
               <svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -19,12 +19,14 @@ export default () => {
         <div>
           {" "}
           <p className="text-md text-center pb-4 text-gray-500 italic">
-            Trusted by professionals worldwide. Quick and efficient.
+            Build for professionals worldwide. Quick and efficient.
           </p>
         </div>
         <div className="text-center pb-4 space-y-4">
           <h2 className="text-4xl text-slate-800 font-bold mx-auto md:text-5xl">
-            {t("header")}✨
+            ✨{t("header")}
+            <br />
+            {t("header2")}
           </h2>
           <p className="text-lg">
             {t("subheader")} <br />
@@ -35,10 +37,12 @@ export default () => {
           <p className="text-center pb-4 ">
             <Link href="/login">
               {" "}
-              <button className="bg-blue-600 hover:bg-blue-500 text-white font-bold py-4 px-6 rounded-3xl">
+              <button
+                className="bg-blue-600 
+           text-white font-bold py-4 px-6 rounded-3xl hover:scale-105 transition-transform ">
                 {t("button")}
               </button>
-            </Link>
+            </Link>{" "}
           </p>
         </div>{" "}
         <div></div>

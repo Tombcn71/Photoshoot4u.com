@@ -9,9 +9,10 @@ import { dir } from "i18next";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
-  title: "The AI headshot photographer for professionals | Photoshoot4u",
+  title:
+    "Professional AI headshot photography, ready in 30 minutes | Photoshoot4u",
   description:
-    "Our cutting-edge AI technology captures stunning professional headshots in minutes right from the comfort of your own home or office",
+    "Upload 6+ photo's of yourself and receive 40 professional quality HD headshots, save time and money and do an AI photo shoot from your laptop or phone.",
 };
 export function generateStaticParams() {
   return i18nConfig.locales.map((locale) => ({ locale }));
@@ -32,7 +33,7 @@ export default function RootLayout({
         gtmId="
 GTM-MH2K6TPL"
       />
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen bg-stone-100 flex flex-col">
         <section>
           <Suspense
             fallback={

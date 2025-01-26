@@ -7,7 +7,7 @@ export default () => {
   const { t } = useTranslation();
 
   return (
-    <section className="py-14">
+    <section className="py-14 px-14">
       <div className="max-w-screen-xl mx-auto px-4 gap-12 md:flex md:px-8">
         <div className="flex-1">
           <div className="max-w-lg mb-10">
@@ -27,6 +27,12 @@ export default () => {
         </div>
         <div className="flex-1 mt-12 md:mt-0">
           <ul className="space-y-4 divide-y">
+            <li className="py-5">
+              <summary className="flex items-center justify-between font-semibold text-gray-700">
+                {t("q")}{" "}
+              </summary>
+              <p className="mt-3 text-gray-600 leading-relaxed">{t("a")} </p>
+            </li>
             <li className="py-5">
               <summary className="flex items-center justify-between font-semibold text-gray-700">
                 {t("q1")}{" "}
