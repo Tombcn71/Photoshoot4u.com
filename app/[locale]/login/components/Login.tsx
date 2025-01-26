@@ -121,10 +121,7 @@ export const Login = ({
       <div className="flex items-center justify-center p-8">
         <div className="flex flex-col gap-4 bg-neutral-50 dark:bg-neutral-900 border border-neutral-200 p-4 rounded-xl max-w-sm w-full">
           <h1 className="text-4xl pb-4 text-center">👋 {t("Welcome")}!</h1>{" "}
-          <p className="text-l text-center opacity-60">
-            Sign in to get started. Then you can buy credits and upload images
-            to start your photoshoot.
-          </p>
+          <p className="text-l text-center opacity-60">{t("login")}</p>
           <Button
             onClick={signInWithGoogle}
             className="font-semibold bg-blue-500  hover:bg-blue-600 p-6 ">
@@ -181,14 +178,14 @@ export const Login = ({
           <div>
             {" "}
             <p className="text-sm text-gray-500 italic">
-              Trusted by professionals worldwide. Quick and efficient.
+              Build for professionals worldwide. Quick and efficient.
             </p>
           </div>
           <div className="pt-6 text-sm text-gray-500">
             {" "}
             ✅ 14 days money back guarantee <br />
             ✅ Livechat 24 hrs available <br />
-            ✅ Done in 1 hour. fast turn around <br />
+            ✅ Done in 30 minutes. fast turn around <br />
           </div>
         </div>
       </div>
