@@ -32,7 +32,9 @@
     "i18nConFig.js",
     "app/[locale]/layout.js",
     "components/Footer.tsx",
-    "app/[locale]/overview/page.tsx"
+    "app/[locale]/overview/page.tsx",
+    "app/lib",
+    "lib/fpixel.js"
   ],
   "exclude": ["node_modules"]
 }
