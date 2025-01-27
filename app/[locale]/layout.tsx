@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
 import { GoogleTagManager } from "@next/third-parties/google";
-
+import { FacebookPixelProvider } from "@/components/FacebookPixelProvider";
 export const metadata = {
   title:
     "Professional AI headshot photography, ready in 30 minutes | Photoshoot4u",
@@ -32,7 +32,8 @@ export default function RootLayout({
       <GoogleTagManager
         gtmId="
 GTM-MH2K6TPL"
-      />
+      />{" "}
+      <FacebookPixelProvider />
       <body className="min-h-screen flex flex-col">
         <section>
           <Suspense
