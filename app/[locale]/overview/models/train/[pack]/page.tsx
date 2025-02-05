@@ -1,4 +1,4 @@
-import Zone from "@/components/Zone";
+import TrainModelZone from "@/components/TrainModelZone";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -34,7 +34,7 @@ export default async function Index({ params }: { params: { pack: string } }) {
             </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-6">
-            <Zone packSlug={params.pack} />
+            <TrainModelZone packSlug={params.pack} />
           </CardContent>
         </Card>
       </div>
