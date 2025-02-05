@@ -1,12 +1,18 @@
+"use client";
+
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Input } from "@/components/ui/input";
 import { X } from "lucide-react";
-import { Input } from "./ui/input";
 
-export default function ImageUploadForm() {
+interface ImageUploadFormProps {
+  packSlug: string;
+}
+
+export default function ImageUploadForm({ packSlug }: ImageUploadFormProps) {
   const [files, setFiles] = useState<File[]>([]);
   const [modelType, setModelType] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
