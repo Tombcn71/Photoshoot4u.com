@@ -7,7 +7,6 @@ import dynamic from "next/dynamic";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
 import { GoogleTagManager } from "@next/third-parties/google";
-import FacebookPixel from "@/components/FacebookPixel";
 
 export const metadata = {
   title:
@@ -30,7 +29,6 @@ export default function RootLayout({
   return (
     <html lang={locale} dir={dir(locale)} className=" scroll-smooth">
       {" "}
-      <FacebookPixel />
       <GoogleTagManager
         gtmId="
 GTM-MH2K6TPL"

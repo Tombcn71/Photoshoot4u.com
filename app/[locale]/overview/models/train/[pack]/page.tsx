@@ -1,4 +1,4 @@
-import TrainModelZone from "@/components/TrainModelZone";
+import Zone from "@/components/Zone";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -12,15 +12,15 @@ import { FaArrowLeft } from "react-icons/fa";
 
 const packsIsEnabled = process.env.NEXT_PUBLIC_TUNE_TYPE === "packs";
 
-export default async function Index({ params }: { params: { pack : string } }) {
-  
+export default async function Index({ params }: { params: { pack: string } }) {
   return (
     <div className="w-full max-w-2xl mx-auto">
       <div
         id="train-model-container"
-        className="flex flex-1 flex-col gap-2 px-2"
-      >
-        <Link href={packsIsEnabled ? "/overview/packs" : "/overview"} className="text-sm w-fit">
+        className="flex flex-1 flex-col gap-2 px-2">
+        <Link
+          href={packsIsEnabled ? "/overview/packs" : "/overview"}
+          className="text-sm w-fit">
           <Button variant={"outline"}>
             <FaArrowLeft className="mr-2" />
             Go Back
@@ -34,7 +34,7 @@ export default async function Index({ params }: { params: { pack : string } }) {
             </CardDescription>
           </CardHeader>
           <CardContent className="grid gap-6">
-            <TrainModelZone packSlug={params.pack} />
+            <Zone packSlug={params.pack} />
           </CardContent>
         </Card>
       </div>
