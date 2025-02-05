@@ -1,3 +1,5 @@
+"use client";
+
 import TrainModelZone from "@/components/TrainModelZone";
 import { Button } from "@/components/ui/button";
 import {
