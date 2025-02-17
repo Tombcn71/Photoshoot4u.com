@@ -29,6 +29,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { FaFemale, FaImages, FaMale, FaRainbow } from "react-icons/fa";
 import * as z from "zod";
 import { fileUploadFormSchema } from "@/types/zod";
+import { type PutBlobResult } from "@vercel/blob";
 import { upload } from "@vercel/blob/client";
 import axios from "axios";
 
@@ -82,15 +83,16 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
         });
       }
 
-      // check that in total images do not exceed a combined 4.5MB
+      // check that in total images do not exceed a combined 200MB
       const totalSize = files.reduce((acc, file) => acc + file.size, 0);
       const newSize = newFiles.reduce((acc, file) => acc + file.size, 0);
 
-      if (totalSize + newSize > 4.5 * 1024 * 1024) {
+      // If Total Size of image more than "200MB", then it will Throw an error of "Images exceed size limit"
+      if (totalSize + newSize > 200 * 1024 * 1024) {
         toast({
           title: "Images exceed size limit",
           description:
-            "The total combined size of the images cannot exceed 4.5MB.",
+            "The total combined size of the images cannot exceed 200MB.",
           duration: 5000,
         });
         return;
@@ -116,12 +118,12 @@ export default function TrainModelZone({ packSlug }: { packSlug: string }) {
 
   const trainModel = useCallback(async () => {
     setIsLoading(true);
-    // Upload each file to Vercel blob and store the resulting URLs
-    const blobUrls = [];
+
+    const blobUrls: string[] = [];
 
     if (files) {
       for (const file of files) {
-        const blob = await upload(file.name, file, {
+        const blob: PutBlobResult = await upload(file.name, file, {
           access: "public",
           handleUploadUrl: "/astria/train-model/image-upload",
         });
