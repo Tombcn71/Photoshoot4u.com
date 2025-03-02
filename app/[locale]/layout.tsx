@@ -7,7 +7,6 @@ import dynamic from "next/dynamic";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
 import { GoogleTagManager } from "@next/third-parties/google";
-
 export const metadata = {
   title:
     "Professional AI headshot photography, ready in 30 minutes | Photoshoot4u",
