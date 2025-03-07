@@ -33,7 +33,7 @@ export default async function Index({ params: { locale } }) {
           namespaces={i18nNamespaces}
           locale={locale}
           resources={resources}>
-          <Hero5 /> <Gallery /> <ExplainerSection />
+          <Hero5 /> <ExplainerSection />
           <Faq />
           <PricingSection /> <Footer />
         </TranslationsProvider>

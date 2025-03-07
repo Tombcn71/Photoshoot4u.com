@@ -2,7 +2,8 @@
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 import Gallery from "./gallery";
-
+import { Button } from "./ui/button";
+import Heroic from "/public/Heroic.png";
 export default () => {
   const { t } = useTranslation();
   // Replace javascript:void(0) path with your path
@@ -14,27 +15,21 @@ export default () => {
   ];
 
   return (
-    <>
-      <section className="mt-14 mx-auto max-w-screen-xl pb-4 px-4 sm:px-8">
-        <div>
-          {" "}
-          <p className="text-md text-center pb-4 text-gray-500 italic">
-            Build for professionals worldwide. Quick and efficient.
-          </p>
-        </div>
-        <div className="text-center pb-4 space-y-4">
-          <h2 className="text-4xl text-slate-800 font-bold mx-auto md:text-5xl">
-            ✨{t("header")}
+    <div className="flex flex-col items-center pt-16">
+      <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
+        <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
+          <h1 className="text-5xl font-bold">
+            {" "}
+            {t("header")}
             <br />
-            {t("header2")}
-          </h2>
+            {t("header2")}✨
+          </h1>
           <p className="text-lg">
             {t("subheader")} <br />
             {t("subheaderbr")}
           </p>
-        </div>
-        <div>
-          <p className="text-center pb-4 ">
+
+          <div className="flex flex-col space-y-2">
             <Link href="/login">
               {" "}
               <button
@@ -43,10 +38,16 @@ export default () => {
                 {t("button")}
               </button>
             </Link>{" "}
-          </p>
-        </div>{" "}
-        <div></div>
-      </section>
-    </>
+          </div>
+        </div>
+        <div className="lg:w-1/2 w-full mt-8 lg:mt-0">
+          <img
+            src={Heroic.src}
+            alt="AI Headshot Illustration"
+            className="rounded-lg object-cover w-full h-full"
+          />
+        </div>
+      </div>
+    </div>
   );
 };

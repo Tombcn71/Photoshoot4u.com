@@ -71,9 +71,6 @@ export default async function Navbar() {
         )}
         {!user && (
           <div className="md:block hidden  lg:ml-auto align-items: flex-end;  justify-end">
-            <Link href="/Examples">
-              <Button variant={"ghost"}>Examples</Button>
-            </Link>
             <Link href="/#How">
               <Button variant={"ghost"}>How it works</Button>
             </Link>
