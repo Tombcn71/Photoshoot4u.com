@@ -27,11 +27,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang={locale} dir={dir(locale)} className=" scroll-smooth">
-      {" "}
       <GoogleTagManager
         gtmId="
 GTM-MH2K6TPL"
-      />{" "}
+      />
       <body className="min-h-screen flex flex-col">
         <section>
           <Suspense

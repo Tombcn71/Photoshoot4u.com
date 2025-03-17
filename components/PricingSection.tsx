@@ -12,7 +12,6 @@ export default function PricingSection() {
       <h2 id="Pricing" className="text-4xl w-full  font-bold text-center mb-8">
         {t("pricing1")}
       </h2>
-      <p className="text-center text-lg">{t("pricingsub")}</p>
       <div className="flex flex-wrap justify-center lg:space-x-4 space-y-4 lg:space-y-0 items-stretch">
         <div className="flex flex-col border rounded-lg p-4 w-full lg:w-1/4 bg-white">
           <div className="flex-grow space-y-4">
@@ -42,11 +41,10 @@ export default function PricingSection() {
           </div>
           <div className="mt-10 text-center">
             <Link href="/login">
-              <Button className="border rounded-full h-12 px-6 m-2 text-lg">
-                Buy Now
-              </Button>
+              {" "}
+              <Button className="w-3/4">choose</Button>
             </Link>
-          </div>
+          </div>{" "}
         </div>
         <div className="flex flex-col border rounded-lg p-4 w-full lg:w-1/4 bg-blue-50">
           <div className="flex-grow space-y-4">
@@ -76,9 +74,8 @@ export default function PricingSection() {
           </div>
           <div className="mt-10 text-center">
             <Link href="/login">
-              <Button className="border rounded-full h-12 px-6 m-2 text-lg">
-                Buy Now
-              </Button>
+              {" "}
+              <Button className="w-3/4">choose</Button>
             </Link>
           </div>
         </div>
@@ -110,9 +107,8 @@ export default function PricingSection() {
           </div>
           <div className="mt-10 text-center">
             <Link href="/login">
-              <Button className="border rounded-full h-12 px-6 m-2 text-lg">
-                Buy Now
-              </Button>
+              {" "}
+              <Button className="w-3/4">choose</Button>
             </Link>
           </div>
         </div>

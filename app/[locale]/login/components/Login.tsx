@@ -185,7 +185,7 @@ export const Login = ({
             {" "}
             ✅ 14 days money back guarantee <br />
             ✅ Livechat 24 hrs available <br />
-            ✅ Done in 30 minutes. fast turn around <br />
+            ✅ Done in 20 minutes. fast turn around <br />
           </div>
         </div>
       </div>

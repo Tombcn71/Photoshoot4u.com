@@ -18,26 +18,23 @@ export default () => {
     <div className="flex flex-col items-center pt-16">
       <div className="flex flex-col lg:flex-row items-center gap-8 p-8 max-w-6xl w-full">
         <div className="flex flex-col space-y-4 lg:w-1/2 w-full">
-          <h1 className="text-5xl font-bold">
-            {" "}
-            {t("header")}
-            <br />
-            {t("header2")}✨
-          </h1>
-          <p className="text-lg">
-            {t("subheader")} <br />
-            {t("subheaderbr")}
-          </p>
+          <h1 className="text-5xl font-bold"> {t("header")}✨</h1>
+          <p className="text-lg">{t("subheader")}</p>
 
           <div className="flex flex-col space-y-2">
             <Link href="/login">
               {" "}
-              <button
-                className="bg-blue-600 
-           text-white font-bold py-4 px-6 rounded-3xl hover:scale-105 transition-transform ">
-                {t("button")}
-              </button>
-            </Link>{" "}
+              <Button className="w-full lg:w-1/2">{t("button")}</Button>
+            </Link>
+            <p className="text-sm text-gray-500 italic">
+              Trusted by professionals worldwide. Quick and efficient.
+            </p>{" "}
+            <div className="mt-4 text-gray-500">
+              <span>Already a member? </span>
+              <Link className="text-blue-600 hover:underline" href="/login">
+                Sign In
+              </Link>
+            </div>
           </div>
         </div>
         <div className="lg:w-1/2 w-full mt-8 lg:mt-0">

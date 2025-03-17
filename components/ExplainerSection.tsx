@@ -23,11 +23,7 @@ export default function ExplainerSection() {
           </div>
           <h3 className="text-2xl font-semibold">{t("1upload")}</h3>
         </div>
-        <p className="text-lg text-gray-600 text-center">
-          <br /> {t("1text")}
-          <br />
-          {t("howline2")} <br /> {t("howline3")}
-        </p>
+        <p className="text-lg text-gray-600 text-center">{t("howline3")}</p>
         <img
           src={voorbeeld1.src}
           alt="AI Headshot example"
@@ -61,8 +57,6 @@ export default function ExplainerSection() {
         </div>
         <p className="text-lg text-gray-600 text-center">
           {t("3textbr1")} <br />
-          {t("3textbr2")} <br />
-          {t("3textbr3")}{" "}
         </p>
 
         <img

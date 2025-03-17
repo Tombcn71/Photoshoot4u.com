@@ -9,6 +9,9 @@ import Faq from "@/components/Faq";
 import PricingSection from "@/components/PricingSection";
 import initTranslations from "../i18n";
 import Footer from "@/components/Footer";
+import PricingBanner from "@/components/PricingBanner";
+import Slider from "@/components/Slider";
+import Exhero from "@/components/Exhero";
 const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
@@ -33,9 +36,10 @@ export default async function Index({ params: { locale } }) {
           namespaces={i18nNamespaces}
           locale={locale}
           resources={resources}>
-          <Hero5 /> <ExplainerSection />
-          <Faq />
-          <PricingSection /> <Footer />
+          <Hero5 />
+          <ExplainerSection />
+          <PricingSection /> <Faq />
+          <Footer />
         </TranslationsProvider>
       </>
     </>

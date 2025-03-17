@@ -34,7 +34,8 @@
     "components/Footer.tsx",
     "app/[locale]/overview/page.tsx",
     "app/lib",
-    "lib/fpixel.js"
+    "lib/fpixel.js",
+    "components/StepsComponent.tsx"
   ],
   "exclude": ["node_modules"]
 }
