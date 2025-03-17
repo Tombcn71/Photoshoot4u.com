@@ -61,7 +61,7 @@
     "node-fetch": "2",
     "npm": "^10.5.0",
     "postcss": "^8.4.41",
-    "react": "^18.2.0",
+    "react": "^18.3.0",
     "react-dom": "^18.2.0",
     "react-dropzone": "^14.2.3",
     "react-facebook-pixel": "^1.0.4",

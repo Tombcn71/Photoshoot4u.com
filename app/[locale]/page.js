@@ -3,15 +3,11 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import TranslationsProvider from "@/components/TranslationsProvider";
 import ExplainerSection from "@/components/ExplainerSection";
-import Gallery from "@/components/gallery";
 import Hero5 from "@/components/Hero5";
 import Faq from "@/components/Faq";
 import PricingSection from "@/components/PricingSection";
 import initTranslations from "../i18n";
 import Footer from "@/components/Footer";
-import PricingBanner from "@/components/PricingBanner";
-import Slider from "@/components/Slider";
-import Exhero from "@/components/Exhero";
 const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
@@ -38,8 +34,8 @@ export default async function Index({ params: { locale } }) {
           resources={resources}>
           <Hero5 />
           <ExplainerSection />
-          <PricingSection /> <Faq />
-          <Footer />
+          <Faq />
+          <PricingSection /> <Footer />
         </TranslationsProvider>
       </>
     </>
