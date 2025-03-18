@@ -137,13 +137,13 @@ export default async function Navbar() {
             </div>{" "}
           </>
         )}
-        <div className="md:block hidden pt-2 ">
+        <div className=" pt-2 ">
           <LanguageChanger />
         </div>
         <Sheet>
-          <div className=" md:hidden ">
+          <div className=" md:hidden mr-4">
             <SheetTrigger>
-              <MenuIcon className="mr-2 mt-3" />
+              <MenuIcon className="mt-3" />
             </SheetTrigger>
             <div className="">
               <SheetContent className="w-[220px] h-[250px] text-black p-1 text-align: leftsm:w-[240px]">
