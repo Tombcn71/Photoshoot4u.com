@@ -28,6 +28,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang={locale} dir={dir(locale)} className=" scroll-smooth">
+      <GoogleTagManager
+        gtmId="
+GTM-NZX53VMC"
+      />
       <body className="min-h-screen flex flex-col">
         <section>
           <Suspense
@@ -44,10 +48,6 @@ export default function RootLayout({
         <Toaster />
         <Analytics />
       </body>
-      <GoogleTagManager
-        gtmId="
-GTM-NZX53VMC"
-      />
     </html>
   );
 }
