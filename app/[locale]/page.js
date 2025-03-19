@@ -29,7 +29,6 @@ export default async function Index({ params: { locale } }) {
   return (
     <>
       <>
-        import {GoogleAnalytics} from '@next/third-parties/google'
         <TranslationsProvider
           namespaces={i18nNamespaces}
           locale={locale}
