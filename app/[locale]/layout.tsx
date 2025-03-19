@@ -34,7 +34,7 @@ export default function RootLayout({
     <html lang={locale} dir={dir(locale)} className=" scroll-smooth">
       <GoogleTagManager
         gtmId="
-GTM-MH2K6TPL"
+GTM-NZX53VMC"
       />
       <Head>
         {/* Meta Pixel Code */}
