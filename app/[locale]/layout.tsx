@@ -67,6 +67,7 @@ GTM-NZX53VMC"
       </Head>
       {/* End Meta Pixel Code */}
       <body className="min-h-screen flex flex-col">
+        <PixelTracker />
         <section>
           <Suspense
             fallback={
