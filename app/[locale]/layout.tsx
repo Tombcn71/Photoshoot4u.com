@@ -9,8 +9,7 @@ import { dir } from "i18next";
 import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
-  title:
-    "Professional AI headshot photography, ready in 30 minutes | Photoshoot4u",
+  title: "Professional AI Headshots in minutes | Photoshoot4u",
   description:
     "Upload 6+ photo's of yourself and receive 40 professional quality HD headshots, save time and money and do an AI photo shoot from your laptop or phone.",
 };
