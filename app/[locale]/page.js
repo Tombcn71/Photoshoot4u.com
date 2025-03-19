@@ -8,7 +8,6 @@ import Faq from "@/components/Faq";
 import PricingSection from "@/components/PricingSection";
 import initTranslations from "../i18n";
 import Footer from "@/components/Footer";
-import { GoogleTagManager } from "@next/third-parties/google";
 
 const i18nNamespaces = ["home"];
 
@@ -30,11 +29,7 @@ export default async function Index({ params: { locale } }) {
   return (
     <>
       <>
-        <GoogleTagManager
-          gtmId="
-GTM-NZX53VMC"
-        />
-
+        import {GoogleAnalytics} from '@next/third-parties/google'
         <TranslationsProvider
           namespaces={i18nNamespaces}
           locale={locale}
