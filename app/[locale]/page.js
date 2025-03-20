@@ -8,6 +8,8 @@ import Faq from "@/components/Faq";
 import PricingSection from "@/components/PricingSection";
 import initTranslations from "../i18n";
 import Footer from "@/components/Footer";
+import Banner from "@/components/Banner";
+import Navbar from "@/components/Navbar";
 const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
@@ -24,7 +26,6 @@ export default async function Index({ params: { locale } }) {
   if (user) {
     return redirect("/overview");
   }
-
   return (
     <>
       <>
@@ -32,6 +33,7 @@ export default async function Index({ params: { locale } }) {
           namespaces={i18nNamespaces}
           locale={locale}
           resources={resources}>
+          {" "}
           <Hero5 />
           <ExplainerSection />
           <Faq />
