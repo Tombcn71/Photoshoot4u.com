@@ -2,13 +2,17 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import Banner from "@/components/Banner"; // Adjust path as needed
+import Banner from "./Banner";
+import { useState, useEffect } from "react";
 
 export default function BannerWrapper() {
   const pathname = usePathname();
-  const excludePaths = ["/overview/"];
+  const excludePaths = ["/login", "/register"];
+  const [showBanner, setShowBanner] = useState(true);
 
-  const shouldShowBanner = !excludePaths.includes(pathname);
+  useEffect(() => {
+    setShowBanner(!excludePaths.includes(pathname));
+  }, [pathname, excludePaths]);
 
-  return <>{shouldShowBanner && <Banner />}</>;
+  return <>{showBanner && <Banner />}</>;
 }
