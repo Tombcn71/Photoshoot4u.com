@@ -8,7 +8,6 @@ import Faq from "@/components/Faq";
 import PricingSection from "@/components/PricingSection";
 import initTranslations from "../i18n";
 import Footer from "@/components/Footer";
-
 const i18nNamespaces = ["home"];
 
 export const dynamic = "force-dynamic";
