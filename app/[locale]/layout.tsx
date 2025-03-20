@@ -45,7 +45,6 @@ GTM-NZX53VMC"
             fallback={
               <div className="flex w-full px-4 lg:px-40 py-4 items-center border-b text-center gap-8 justify-between h-[69px]" />
             }>
-            <Banner />
             <Navbar />
             <CrispWithNoSSR />
           </Suspense>
