@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import i18nConfig from "@/i18nConfig";
 import { dir } from "i18next";
 import { GoogleTagManager } from "@next/third-parties/google";
-import BannerWrapper from "@/components/BannerWrapper";
+import Banner from "@/components/Banner";
 
 export const metadata = {
   title: "Professional AI Headshots in minutes | Photoshoot4u",
@@ -33,7 +33,7 @@ export default function RootLayout({
 GTM-NZX53VMC"
       />
       <body className="min-h-screen flex flex-col">
-        <BannerWrapper />
+        <Banner />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NZX53VMC"
