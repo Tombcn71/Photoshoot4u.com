@@ -83,11 +83,6 @@ export default async function Navbar() {
             </Link>{" "}
           </div>
         )}
-        {user && packsIsEnabled && (
-          <Link href="/overview/packs">
-            <Button variant={"ghost"}>Packs</Button>
-          </Link>
-        )}
         {user && (
           <div className=" flex flex-row lg:ml-auto  gap-2 ">
             {stripeIsConfigured && (
