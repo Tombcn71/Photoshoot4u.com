@@ -33,7 +33,6 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Banner from "./Banner";
-import BannerWrapper from "./BannerWrapper";
 
 export const dynamic = "force-dynamic";
 
@@ -59,6 +58,7 @@ export default async function Navbar() {
   return (
     <>
       {" "}
+      <Banner />
       <div className=" bg-white flex w-full px-4 lg:px-40 py-3  border-b text-center gap-8 justify-between ">
         {!user && (
           <div className="flex gap-2 h-full ">

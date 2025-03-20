@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 export default function BannerWrapper() {
   const pathname = usePathname();
-  const excludePaths = ["/login", "/register"];
+  const excludePaths = ["/login"];
   const [showBanner, setShowBanner] = useState(true);
 
   useEffect(() => {
