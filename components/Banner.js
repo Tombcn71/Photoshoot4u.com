@@ -20,8 +20,8 @@ export default () => {
           </div>
           <p className="py-2 font-medium">
             {" "}
-            ✨ 40 Professional AI Headshots - Introduction Price 19€ ✨ ⏰
-            Limited Time Offer!
+            ✨ 40 Professionele AI Headshots - Introductie Prijs 19€ ✨ ⏰
+            Tijdelijke aanbieding!
           </p>
         </div>
       </div>
