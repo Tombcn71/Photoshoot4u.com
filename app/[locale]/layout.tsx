@@ -33,7 +33,6 @@ export default function RootLayout({
 GTM-NZX53VMC"
       />
       <body className="min-h-screen flex flex-col">
-        <Banner />
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-NZX53VMC"
