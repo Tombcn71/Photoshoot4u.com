@@ -129,7 +129,7 @@ export async function POST(request: Request) {
         from: "noreply@photoshoot4u.com",
         to: user?.email ?? "",
         subject: "Your model was successfully trained!",
-        html: `<h3>We're writing to notify you that your model training was successful! 1 credit has been used from your account. Click on the button to get your headshots! </h3> 
+        html: `<h3>We're writing to notify you that your model training was successful! 1 credit has been used from your account. Click on the link to get your headshots! </h3> 
           <style>
 		.button-class {
 			background-color: #0000FF
