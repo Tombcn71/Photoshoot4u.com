@@ -1,4 +1,3 @@
-import BannerWrapper from "@/components/BannerWrapper";
 import Login from "../login/page";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
 import { cookies } from "next/headers";
@@ -20,10 +19,5 @@ export default async function RootLayout({
     return <Login />;
   }
 
-  return (
-    <div className="flex w-full flex-col px-4 lg:px-40">
-      <BannerWrapper />
-      {children}
-    </div>
-  );
+  return <div className="flex w-full flex-col px-4 lg:px-40">{children}</div>;
 }
