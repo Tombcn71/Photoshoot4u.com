@@ -1,3 +1,4 @@
+import Banner from "@/components/Banner";
 import ClientSideModelsList from "@/components/realtime/ClientSideModelsList";
 import { Database } from "@/types/supabase";
 import { createServerComponentClient } from "@supabase/auth-helpers-nextjs";
@@ -24,6 +25,7 @@ export default async function Index() {
     )`
     )
     .eq("user_id", user.id);
-
+  const showBanner = false;
+  <Banner show={showBanner} />;
   return <ClientSideModelsList serverModels={models ?? []} />;
 }
